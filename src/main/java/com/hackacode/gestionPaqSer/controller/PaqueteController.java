@@ -24,7 +24,7 @@ public class PaqueteController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<PaqueteEntity> obtenerPaquete(@PathVariable(value = "id") Integer idPaquete) throws MyException {
+    public ResponseEntity<PaqueteEntity> obtenerPaquete(@PathVariable(value = "id") String idPaquete) throws MyException {
         return new ResponseEntity<>(paqueteService.obtenerPaquete(idPaquete), HttpStatus.OK);
     }
 
@@ -38,12 +38,12 @@ public class PaqueteController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<PaqueteEntity> actualizarPaquete(@RequestBody PaqueteEntity paqueteEntity, @PathVariable Integer id) throws MyException {
+    public ResponseEntity<PaqueteEntity> actualizarPaquete(@RequestBody PaqueteEntity paqueteEntity, @PathVariable String id) throws MyException {
             return new ResponseEntity<>(paqueteService.actualizarPaquete(paqueteEntity,id), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminarPaquete(@PathVariable(value = "id") Integer idPaquete) throws MyException {
+    public ResponseEntity<String> eliminarPaquete(@PathVariable(value = "id") String idPaquete) throws MyException {
         paqueteService.eliminarPaquete(idPaquete);
         return new ResponseEntity<>("Paquete Eliminado", HttpStatus.OK);
     }

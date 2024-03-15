@@ -16,9 +16,9 @@ import java.util.Set;
 public class PaqueteEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "uuid")
     @Column(name = "id_paquete")
-    private Integer idPaquete;
+    private String idPaquete;
 
     @ManyToMany
     @JoinTable(

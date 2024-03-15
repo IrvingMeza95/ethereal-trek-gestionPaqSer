@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.sql.rowset.serial.SerialStruct;
 import java.sql.Date;
 
 @Data
@@ -38,13 +39,15 @@ public class VentaEntity {
     private PaqueteEntity paquete;
 
     @Column(name = "tipo_venta", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private TipoDeVenta tipoVenta;
+    private String tipoVenta;
 
     @Column(name = "fecha_venta", nullable = false)
     private Date fechaVenta;
 
     @Column(name = "medio_pago", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private MediosDePago medioPago;
+    private String medioPago;
+
+    @Column(nullable = false)
+    private Double total;
+
 }

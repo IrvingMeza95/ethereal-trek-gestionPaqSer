@@ -11,4 +11,5 @@ public interface VentaService {
     List<VentaEntity> listarVentas();
     VentaEntity actualizarVenta(VentaEntity venta, Integer id) throws MyException;
     void eliminarVenta(Integer ventaId) throws MyException;
+    List<VentaEntity> listarVentasFiltrado(String param);
 }

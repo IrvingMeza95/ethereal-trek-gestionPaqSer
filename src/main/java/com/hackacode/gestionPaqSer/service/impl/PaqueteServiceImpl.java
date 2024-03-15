@@ -18,11 +18,21 @@ public class PaqueteServiceImpl implements PaqueteService {
 
     @Override
     public PaqueteEntity crearPaquete(PaqueteEntity paquete) {
+        calcularPrecio(paquete);
         return paqueteRepository.save(paquete);
     }
 
+    private void calcularPrecio(PaqueteEntity paquete) {
+        paquete.setPrecio(0D);
+        paquete.getListaServicios().forEach(s -> {
+            paquete.setPrecio(paquete.getPrecio() +
+                    Double.valueOf(paqueteRepository.extraerPrecioDeServicio(s.getIdServicio())));
+        });
+        paquete.setPrecio(paquete.getPrecio() * .9);
+    }
+
     @Override
-    public PaqueteEntity obtenerPaquete(Integer idPaquete) throws MyException {
+    public PaqueteEntity obtenerPaquete(String idPaquete) throws MyException {
         Optional<PaqueteEntity> paquete = paqueteRepository.findById(idPaquete);
         if (paquete.isEmpty())
             throw new MyException("No se há podido cargar el paquete.");
@@ -35,17 +45,17 @@ public class PaqueteServiceImpl implements PaqueteService {
     }
 
     @Override
-    public PaqueteEntity actualizarPaquete(PaqueteEntity nuevoPaquete, Integer paqueteId) throws MyException {
+    public PaqueteEntity actualizarPaquete(PaqueteEntity nuevoPaquete, String paqueteId) throws MyException {
         PaqueteEntity paquete = obtenerPaquete(paqueteId);
         paquete.setListaServicios(nuevoPaquete.getListaServicios());
         paquete.setNombre(nuevoPaquete.getNombre());
         paquete.setDescripcion(nuevoPaquete.getDescripcion());
-        paquete.setPrecio(nuevoPaquete.getPrecio());
+        calcularPrecio(paquete);
         return paqueteRepository.save(paquete);
     }
 
     @Override
-    public void eliminarPaquete(Integer paqueteId) throws MyException {
+    public void eliminarPaquete(String paqueteId) throws MyException {
         PaqueteEntity paquete = obtenerPaquete(paqueteId);
         paqueteRepository.delete(paquete);
     }

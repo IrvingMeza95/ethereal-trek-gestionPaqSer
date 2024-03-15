@@ -8,8 +8,8 @@ import java.util.Optional;
 
 public interface ServicioService {
     ServicioEntity crearServicio(ServicioEntity servicio);
-    ServicioEntity obtenerServicio(Integer idServicio) throws MyException;
+    ServicioEntity obtenerServicio(String idServicio) throws MyException;
     List<ServicioEntity> listarServicios();
-    ServicioEntity actualizarServicio(ServicioEntity nuevoServicio, Integer id) throws MyException;
-    void eliminarServicio(Integer servicioId) throws MyException;
+    ServicioEntity actualizarServicio(ServicioEntity nuevoServicio, String id) throws MyException;
+    void eliminarServicio(String servicioId) throws MyException;
 }

@@ -15,9 +15,9 @@ import java.sql.Date;
 public class ServicioEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "uuid")
     @Column(name = "id_servicio")
-    private Integer idServicio;
+    private String idServicio;
 
     @Column(name = "nombre")
     private String nombre;

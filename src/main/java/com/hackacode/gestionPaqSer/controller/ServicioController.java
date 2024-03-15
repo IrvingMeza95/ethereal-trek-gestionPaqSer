@@ -24,7 +24,7 @@ public class ServicioController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ServicioEntity> obtenerServicio(@PathVariable(value = "id") Integer idServicio) throws MyException {
+    public ResponseEntity<ServicioEntity> obtenerServicio(@PathVariable(value = "id") String idServicio) throws MyException {
         return new ResponseEntity<>(servicioService.obtenerServicio(idServicio), HttpStatus.OK);
 
     }
@@ -35,12 +35,12 @@ public class ServicioController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ServicioEntity> actualizarServicio(@RequestBody ServicioEntity servicioEntity, @PathVariable Integer id) throws MyException {
+    public ResponseEntity<ServicioEntity> actualizarServicio(@RequestBody ServicioEntity servicioEntity, @PathVariable String id) throws MyException {
         return new ResponseEntity<>(servicioService.actualizarServicio(servicioEntity,id), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminarServicio(@PathVariable(value = "id") Integer idServicio) throws MyException {
+    public ResponseEntity<String> eliminarServicio(@PathVariable(value = "id") String idServicio) throws MyException {
         servicioService.eliminarServicio(idServicio);
         return new ResponseEntity<>("Servicio Eliminado", HttpStatus.NO_CONTENT);
     }

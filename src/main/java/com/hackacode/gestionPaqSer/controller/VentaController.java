@@ -1,6 +1,8 @@
 package com.hackacode.gestionPaqSer.controller;
 
 import com.hackacode.gestionPaqSer.entity.VentaEntity;
+import com.hackacode.gestionPaqSer.enums.MediosDePago;
+import com.hackacode.gestionPaqSer.enums.TipoDeVenta;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
 import com.hackacode.gestionPaqSer.service.VentaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +44,21 @@ public class VentaController {
     public ResponseEntity<String> eliminarVenta(@PathVariable(value = "id") Integer idVenta) throws MyException {
         ventaService.eliminarVenta(idVenta);
         return new ResponseEntity<>("Venta Eliminada", HttpStatus.NO_CONTENT);
+    }
+
+    @GetMapping("/filtrar/{param}")
+    public ResponseEntity<List<VentaEntity>> listarVentasFiltrado(@PathVariable String param){
+        return ResponseEntity.ok(ventaService.listarVentasFiltrado(param));
+    }
+
+    @GetMapping("/tipos-de-venta")
+    public ResponseEntity<List<TipoDeVenta>> tiposDeVenta(){
+        return ResponseEntity.ok(List.of(TipoDeVenta.values()));
+    }
+
+    @GetMapping("/medios-de-pago")
+    public ResponseEntity<List<MediosDePago>> mediosDePago(){
+        return ResponseEntity.ok(List.of(MediosDePago.values()));
     }
 
 }

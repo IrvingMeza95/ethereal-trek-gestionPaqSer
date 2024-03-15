@@ -23,7 +23,7 @@ public class ServicioServiceImpl implements ServicioService {
     }
 
     @Override
-    public ServicioEntity obtenerServicio(Integer idServicio) throws MyException {
+    public ServicioEntity obtenerServicio(String idServicio) throws MyException {
         Optional<ServicioEntity> servicio = servicioRepository.findById(idServicio);
         if (servicio.isEmpty())
             throw new MyException("No se há podido cargar los datos del servicio.");
@@ -36,7 +36,7 @@ public class ServicioServiceImpl implements ServicioService {
     }
 
     @Override
-    public ServicioEntity actualizarServicio(ServicioEntity nuevoServicio, Integer id) throws MyException {
+    public ServicioEntity actualizarServicio(ServicioEntity nuevoServicio, String id) throws MyException {
         ServicioEntity servicio = obtenerServicio(id);
         servicio.setNombre(nuevoServicio.getNombre());
         servicio.setDescripcion(nuevoServicio.getDescripcion());
@@ -48,7 +48,7 @@ public class ServicioServiceImpl implements ServicioService {
     }
 
     @Override
-    public void eliminarServicio(Integer servicioId) throws MyException {
+    public void eliminarServicio(String servicioId) throws MyException {
         ServicioEntity servicio = obtenerServicio(servicioId);
         servicioRepository.delete(servicio);
     }
