@@ -1,9 +1,7 @@
 package com.hackacode.gestionPaqSer.controller;
 
-import com.hackacode.gestionPaqSer.dtos.VentaDTO;
 import com.hackacode.gestionPaqSer.entity.VentaEntity;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
-import com.hackacode.gestionPaqSer.mappers.VentaMapper;
 import com.hackacode.gestionPaqSer.service.VentaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,27 +17,25 @@ public class VentaController {
 
     @Autowired
     private VentaService ventaService;
-    @Autowired
-    private VentaMapper ventaMapper;
 
     @PostMapping
-    public ResponseEntity<VentaDTO> crearVenta(@RequestBody VentaEntity venta) throws MyException {
-        return new ResponseEntity<>(ventaMapper.getVentaDTO(ventaService.crearVenta(venta)), HttpStatus.CREATED);
+    public ResponseEntity<VentaEntity> crearVenta(@RequestBody VentaEntity venta) throws MyException {
+        return new ResponseEntity<>(ventaService.crearVenta(venta), HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<VentaDTO> obtenerVenta(@PathVariable(value = "id") Integer idVenta) throws MyException {
-        return new ResponseEntity<>(ventaMapper.getVentaDTO(ventaService.obtenerVenta(idVenta)), HttpStatus.OK);
+    public ResponseEntity<VentaEntity> obtenerVenta(@PathVariable(value = "id") Integer idVenta) throws MyException {
+        return new ResponseEntity<>(ventaService.obtenerVenta(idVenta), HttpStatus.OK);
     }
 
     @GetMapping
-    public ResponseEntity<List<VentaDTO>> listarVentas() {
-        return new ResponseEntity<>(ventaMapper.getListVentaDTO(ventaService.listarVentas()), HttpStatus.OK);
+    public ResponseEntity<List<VentaEntity>> listarVentas() {
+        return new ResponseEntity<>(ventaService.listarVentas(), HttpStatus.OK);
     }
 
-    @PutMapping
-    public ResponseEntity<VentaDTO> actualizarVenta(@RequestBody VentaEntity ventaEntity) throws MyException {
-        return new ResponseEntity<>(ventaMapper.getVentaDTO(ventaService.actualizarVenta(ventaEntity)), HttpStatus.OK);
+    @PutMapping("/{id}")
+    public ResponseEntity<VentaEntity> actualizarVenta(@RequestBody VentaEntity ventaEntity, @PathVariable Integer id) throws MyException {
+        return new ResponseEntity<>(ventaService.actualizarVenta(ventaEntity, id), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

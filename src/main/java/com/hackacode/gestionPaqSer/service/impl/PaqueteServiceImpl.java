@@ -1,6 +1,7 @@
 package com.hackacode.gestionPaqSer.service.impl;
 
 import com.hackacode.gestionPaqSer.entity.PaqueteEntity;
+import com.hackacode.gestionPaqSer.exceptions.MyException;
 import com.hackacode.gestionPaqSer.repository.PaqueteRepository;
 import com.hackacode.gestionPaqSer.service.PaqueteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +22,11 @@ public class PaqueteServiceImpl implements PaqueteService {
     }
 
     @Override
-    public Optional<PaqueteEntity> obtenerPaquete(Integer idPaquete) {
-        return paqueteRepository.findById(idPaquete);
+    public PaqueteEntity obtenerPaquete(Integer idPaquete) throws MyException {
+        Optional<PaqueteEntity> paquete = paqueteRepository.findById(idPaquete);
+        if (paquete.isEmpty())
+            throw new MyException("No se há podido cargar el paquete.");
+        return paquete.get();
     }
 
     @Override
@@ -31,12 +35,18 @@ public class PaqueteServiceImpl implements PaqueteService {
     }
 
     @Override
-    public PaqueteEntity actualizarPaquete(PaqueteEntity paquete) {
+    public PaqueteEntity actualizarPaquete(PaqueteEntity nuevoPaquete, Integer paqueteId) throws MyException {
+        PaqueteEntity paquete = obtenerPaquete(paqueteId);
+        paquete.setListaServicios(nuevoPaquete.getListaServicios());
+        paquete.setNombre(nuevoPaquete.getNombre());
+        paquete.setDescripcion(nuevoPaquete.getDescripcion());
+        paquete.setPrecio(nuevoPaquete.getPrecio());
         return paqueteRepository.save(paquete);
     }
 
     @Override
-    public void eliminarPaquete(PaqueteEntity paquete) {
+    public void eliminarPaquete(Integer paqueteId) throws MyException {
+        PaqueteEntity paquete = obtenerPaquete(paqueteId);
         paqueteRepository.delete(paquete);
     }
 

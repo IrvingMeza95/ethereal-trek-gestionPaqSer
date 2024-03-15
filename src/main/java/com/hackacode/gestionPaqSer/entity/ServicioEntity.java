@@ -11,7 +11,7 @@ import java.sql.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "servicio")
+@Table(name = "servicios")
 public class ServicioEntity {
 
     @Id

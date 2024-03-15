@@ -12,7 +12,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "paquete")
+@Table(name = "paquetes")
 public class PaqueteEntity {
 
     @Id

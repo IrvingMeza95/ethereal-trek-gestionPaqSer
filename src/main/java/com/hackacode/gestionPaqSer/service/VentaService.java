@@ -9,6 +9,6 @@ public interface VentaService {
     VentaEntity crearVenta(VentaEntity venta) throws MyException;
     VentaEntity obtenerVenta(Integer idVenta) throws MyException;
     List<VentaEntity> listarVentas();
-    VentaEntity actualizarVenta(VentaEntity venta);
+    VentaEntity actualizarVenta(VentaEntity venta, Integer id) throws MyException;
     void eliminarVenta(Integer ventaId) throws MyException;
 }

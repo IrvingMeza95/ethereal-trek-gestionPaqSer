@@ -13,7 +13,7 @@ import java.sql.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "venta")
+@Table(name = "ventas")
 public class VentaEntity {
 
     @Id
@@ -21,13 +21,21 @@ public class VentaEntity {
     @Column(name = "id_venta")
     private Integer idVenta;
 
-    private String clienteId;
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", nullable = false)
+    private ClienteEntity cliente;
 
-    private String empleadoId;
+    @ManyToOne
+    @JoinColumn(name = "id_empleado", nullable = false)
+    private EmpleadoEntity empleado;
 
-    private Integer ServicioId;
+    @ManyToOne
+    @JoinColumn(name = "id_servicio", nullable = true)
+    private ServicioEntity servicio;
 
-    private Integer paqueteId;
+    @ManyToOne
+    @JoinColumn(name = "id_paquete", nullable = true)
+    private PaqueteEntity paquete;
 
     @Column(name = "tipo_venta", nullable = false)
     @Enumerated(EnumType.STRING)

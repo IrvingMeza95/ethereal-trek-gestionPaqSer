@@ -35,7 +35,15 @@ public class VentaServiceImpl implements VentaService {
     }
 
     @Override
-    public VentaEntity actualizarVenta(VentaEntity venta) {
+    public VentaEntity actualizarVenta(VentaEntity nuevaVenta, Integer id) throws MyException {
+        VentaEntity venta = obtenerVenta(id);
+        venta.setCliente(nuevaVenta.getCliente());
+        venta.setEmpleado(nuevaVenta.getEmpleado());
+        venta.setServicio(nuevaVenta.getServicio());
+        venta.setPaquete(nuevaVenta.getPaquete());
+        venta.setTipoVenta(nuevaVenta.getTipoVenta());
+        venta.setFechaVenta(nuevaVenta.getFechaVenta());
+        venta.setMedioPago(nuevaVenta.getMedioPago());
         return ventaRepository.save(venta);
     }
 
