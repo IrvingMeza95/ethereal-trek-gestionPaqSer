@@ -27,13 +27,13 @@ public class PaqueteEntity {
             inverseJoinColumns = @JoinColumn(name = "id_servicio"))
     private Set<ServicioEntity> listaServicios = new HashSet<>();
 
-    @Column(name = "nombre")
+    @Column(name = "nombre", nullable = false)
     private String nombre;
 
-    @Column(name = "descripcion")
+    @Column(name = "descripcion", nullable = false)
     private String descripcion;
 
-    @Column(name = "precio")
+    @Column(name = "precio", nullable = false)
     private Double precio;
 
 }
