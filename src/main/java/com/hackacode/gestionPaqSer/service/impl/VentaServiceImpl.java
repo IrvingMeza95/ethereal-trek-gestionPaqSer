@@ -28,7 +28,10 @@ public class VentaServiceImpl implements VentaService {
     @Override
     public VentaEntity crearVenta(VentaEntity venta) throws MyException {
         setTotal(venta);
-        return ventaRepository.save(venta);
+        VentaEntity ventaEntity = ventaRepository.save(venta);
+        ventaEntity = obtenerVenta(venta.getIdVenta());
+
+        return ventaEntity;
     }
 
     private void setTotal(VentaEntity venta) throws MyException {
