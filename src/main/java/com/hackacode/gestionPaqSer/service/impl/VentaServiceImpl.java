@@ -3,6 +3,7 @@ package com.hackacode.gestionPaqSer.service.impl;
 import com.hackacode.gestionPaqSer.entity.PaqueteEntity;
 import com.hackacode.gestionPaqSer.entity.ServicioEntity;
 import com.hackacode.gestionPaqSer.entity.VentaEntity;
+import com.hackacode.gestionPaqSer.enums.MediosDePago;
 import com.hackacode.gestionPaqSer.enums.TipoDeVenta;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
 import com.hackacode.gestionPaqSer.repository.VentaRepository;
@@ -41,6 +42,12 @@ public class VentaServiceImpl implements VentaService {
         }else{
             PaqueteEntity paquete = paqueteService.obtenerPaquete(venta.getPaquete().getIdPaquete());
             venta.setTotal(paquete.getPrecio());
+        }
+        for (MediosDePago mp : MediosDePago.values()){
+            if (mp.name().equals(venta.getMedioPago())){
+                venta.setTotal(venta.getTotal() * (1 + mp.getComision()));
+                break;
+            }
         }
     }
 

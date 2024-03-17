@@ -29,7 +29,7 @@ public class ServicioEntity {
     private String destiono;
 
     @Column(name = "fecha_servicio")
-    private Date fecha_servicio;
+    private Date fechaServicio;
 
     @Column(name = "costo")
     private Double costo;

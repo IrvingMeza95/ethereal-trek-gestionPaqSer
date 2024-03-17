@@ -2,6 +2,7 @@ package com.hackacode.gestionPaqSer.controller;
 
 import brave.Tracer;
 import com.hackacode.gestionPaqSer.entity.ServicioEntity;
+import com.hackacode.gestionPaqSer.enums.TipoDeServicio;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
 import com.hackacode.gestionPaqSer.responses.ResponseMessage;
 import com.hackacode.gestionPaqSer.service.ServicioService;
@@ -54,6 +55,12 @@ public class ServicioController {
     public ResponseEntity<String> eliminarServicio(@PathVariable(value = "id") String idServicio) throws MyException {
         servicioService.eliminarServicio(idServicio);
         return new ResponseEntity<>("Servicio Eliminado", HttpStatus.NO_CONTENT);
+    }
+
+    @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
+    @GetMapping("/tipo-de-servicios")
+    public ResponseEntity<List<TipoDeServicio>> tiposDeServicio(){
+        return ResponseEntity.ok(List.of(TipoDeServicio.values()));
     }
 
     public ResponseEntity<ResponseMessage> metodoAlternativo(Throwable e){

@@ -1,6 +1,5 @@
 package com.hackacode.gestionPaqSer.service.impl;
 
-import com.hackacode.gestionPaqSer.entity.ClienteEntity;
 import com.hackacode.gestionPaqSer.entity.ServicioEntity;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
 import com.hackacode.gestionPaqSer.repository.ServicioRepository;
@@ -41,7 +40,7 @@ public class ServicioServiceImpl implements ServicioService {
         servicio.setNombre(nuevoServicio.getNombre());
         servicio.setDescripcion(nuevoServicio.getDescripcion());
         servicio.setDestiono(nuevoServicio.getDestiono());
-        servicio.setFecha_servicio(nuevoServicio.getFecha_servicio());
+        servicio.setFechaServicio(nuevoServicio.getFechaServicio());
         servicio.setCosto(nuevoServicio.getCosto());
         servicio.setTipoServicio(nuevoServicio.getTipoServicio());
         return servicioRepository.save(servicio);
