@@ -37,7 +37,6 @@ public class ServicioServiceImpl implements ServicioService {
     @Override
     public ServicioEntity actualizarServicio(ServicioEntity nuevoServicio, String id) throws MyException {
         ServicioEntity servicio = obtenerServicio(id);
-        servicio.setNombre(nuevoServicio.getNombre());
         servicio.setDescripcion(nuevoServicio.getDescripcion());
         servicio.setDestiono(nuevoServicio.getDestiono());
         servicio.setFechaServicio(nuevoServicio.getFechaServicio());

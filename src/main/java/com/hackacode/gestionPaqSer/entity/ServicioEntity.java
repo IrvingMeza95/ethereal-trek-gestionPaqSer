@@ -18,23 +18,14 @@ public class ServicioEntity {
     @GeneratedValue(generator = "uuid")
     @Column(name = "id_servicio")
     private String idServicio;
-
-    @Column(name = "nombre")
-    private String nombre;
-
-    @Column(name = "descripcion")
-    private String descripcion;
-
-    @Column(name = "destino")
-    private String destiono;
-
-    @Column(name = "fecha_servicio")
-    private Date fechaServicio;
-
-    @Column(name = "costo")
-    private Double costo;
-
     @Column(name = "tipo_servicio")
     private String tipoServicio;
-
+    @Column(name = "descripcion")
+    private String descripcion;
+    @Column(name = "destino")
+    private String destiono;
+    @Column(name = "fecha_servicio")
+    private Date fechaServicio;
+    @Column(name = "costo")
+    private Double costo;
 }

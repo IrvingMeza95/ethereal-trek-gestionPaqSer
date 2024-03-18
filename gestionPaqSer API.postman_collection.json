@@ -1,0 +1,1470 @@
+{
+	"info": {
+		"_postman_id": "695b24d3-cec0-46a4-91fa-e0d094b1c920",
+		"name": "gestionPaqSer API",
+		"description": "DESCRIPCION DE MI API REST\n\nContact Support:\n Name: 21ZAM03\n Email: 21jose03.free@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29391445"
+	},
+	"item": [
+		{
+			"name": "ventas",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "obtener Venta",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/ventas/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ventas",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/ventas/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ventas",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"cargo\": \"CONTADOR\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"tipoServicio\": \"<string>\"\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\"\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<dateTime>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "actualizar Venta",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"cargo\": \"CONTADOR\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"tipoServicio\": \"<string>\"\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\"\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<dateTime>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ventas/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ventas",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"cargo\": \"CONTADOR\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"tipoServicio\": \"<string>\"\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\"\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<dateTime>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ventas/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ventas",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"cargo\": \"CONTADOR\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"tipoServicio\": \"<string>\"\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\"\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<dateTime>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "eliminar Venta",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/ventas/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ventas",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/ventas/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ventas",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "tipos-de-venta",
+					"item": [
+						{
+							"name": "tipos De Venta",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/ventas/tipos-de-venta",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ventas",
+										"tipos-de-venta"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/ventas/tipos-de-venta",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ventas",
+												"tipos-de-venta"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  \"SERVICIO\",\n  \"PAQUETE\"\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "medios-de-pago",
+					"item": [
+						{
+							"name": "medios De Pago",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/ventas/medios-de-pago",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ventas",
+										"medios-de-pago"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/ventas/medios-de-pago",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ventas",
+												"medios-de-pago"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  \"TARJETA_DE_CREDITO\",\n  \"TRANSFERENCIA\"\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "filtrar",
+					"item": [
+						{
+							"name": "{param}",
+							"item": [
+								{
+									"name": "listar Ventas Filtrado",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/ventas/filtrar/:param",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ventas",
+												"filtrar",
+												":param"
+											],
+											"variable": [
+												{
+													"key": "param",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/ventas/filtrar/:param",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ventas",
+														"filtrar",
+														":param"
+													],
+													"variable": [
+														{
+															"key": "param"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"idVenta\": \"<integer>\",\n    \"cliente\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"password\": \"<string>\"\n    },\n    \"empleado\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"password\": \"<string>\",\n      \"cargo\": \"VENDEDOR\",\n      \"sueldo\": \"<double>\"\n    },\n    \"servicio\": {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    },\n    \"paquete\": {\n      \"idPaquete\": \"<string>\",\n      \"listaServicios\": [\n        {\n          \"idServicio\": \"<string>\",\n          \"nombre\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"tipoServicio\": \"<string>\"\n        },\n        {\n          \"idServicio\": \"<string>\",\n          \"nombre\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"tipoServicio\": \"<string>\"\n        }\n      ],\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"precio\": \"<double>\"\n    },\n    \"tipoVenta\": \"<string>\",\n    \"fechaVenta\": \"<dateTime>\",\n    \"medioPago\": \"<string>\",\n    \"total\": \"<double>\"\n  },\n  {\n    \"idVenta\": \"<integer>\",\n    \"cliente\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"password\": \"<string>\"\n    },\n    \"empleado\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"password\": \"<string>\",\n      \"cargo\": \"CONTADOR\",\n      \"sueldo\": \"<double>\"\n    },\n    \"servicio\": {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    },\n    \"paquete\": {\n      \"idPaquete\": \"<string>\",\n      \"listaServicios\": [\n        {\n          \"idServicio\": \"<string>\",\n          \"nombre\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"tipoServicio\": \"<string>\"\n        },\n        {\n          \"idServicio\": \"<string>\",\n          \"nombre\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"tipoServicio\": \"<string>\"\n        }\n      ],\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"precio\": \"<double>\"\n    },\n    \"tipoVenta\": \"<string>\",\n    \"fechaVenta\": \"<dateTime>\",\n    \"medioPago\": \"<string>\",\n    \"total\": \"<double>\"\n  }\n]"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "listar Ventas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/ventas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ventas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/ventas",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ventas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"idVenta\": \"<integer>\",\n    \"cliente\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"password\": \"<string>\"\n    },\n    \"empleado\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"password\": \"<string>\",\n      \"cargo\": \"VENDEDOR\",\n      \"sueldo\": \"<double>\"\n    },\n    \"servicio\": {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    },\n    \"paquete\": {\n      \"idPaquete\": \"<string>\",\n      \"listaServicios\": [\n        {\n          \"idServicio\": \"<string>\",\n          \"nombre\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"tipoServicio\": \"<string>\"\n        },\n        {\n          \"idServicio\": \"<string>\",\n          \"nombre\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"tipoServicio\": \"<string>\"\n        }\n      ],\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"precio\": \"<double>\"\n    },\n    \"tipoVenta\": \"<string>\",\n    \"fechaVenta\": \"<dateTime>\",\n    \"medioPago\": \"<string>\",\n    \"total\": \"<double>\"\n  },\n  {\n    \"idVenta\": \"<integer>\",\n    \"cliente\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"password\": \"<string>\"\n    },\n    \"empleado\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"password\": \"<string>\",\n      \"cargo\": \"CONTADOR\",\n      \"sueldo\": \"<double>\"\n    },\n    \"servicio\": {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    },\n    \"paquete\": {\n      \"idPaquete\": \"<string>\",\n      \"listaServicios\": [\n        {\n          \"idServicio\": \"<string>\",\n          \"nombre\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"tipoServicio\": \"<string>\"\n        },\n        {\n          \"idServicio\": \"<string>\",\n          \"nombre\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"tipoServicio\": \"<string>\"\n        }\n      ],\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"precio\": \"<double>\"\n    },\n    \"tipoVenta\": \"<string>\",\n    \"fechaVenta\": \"<dateTime>\",\n    \"medioPago\": \"<string>\",\n    \"total\": \"<double>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "crear Venta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"cargo\": \"CONTADOR\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"tipoServicio\": \"<string>\"\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\"\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<dateTime>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/ventas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ventas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"cargo\": \"CONTADOR\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"tipoServicio\": \"<string>\"\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\"\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<dateTime>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ventas",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ventas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"cargo\": \"CONTADOR\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"tipoServicio\": \"<string>\"\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\"\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<dateTime>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "servicios",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "obtener Servicio",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/servicios/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"servicios",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/servicios/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"servicios",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"idServicio\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"destiono\": \"<string>\",\n  \"fechaServicio\": \"<dateTime>\",\n  \"costo\": \"<double>\",\n  \"tipoServicio\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "actualizar Servicio",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idServicio\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"destiono\": \"<string>\",\n  \"fechaServicio\": \"<dateTime>\",\n  \"costo\": \"<double>\",\n  \"tipoServicio\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/servicios/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"servicios",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"idServicio\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"destiono\": \"<string>\",\n  \"fechaServicio\": \"<dateTime>\",\n  \"costo\": \"<double>\",\n  \"tipoServicio\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/servicios/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"servicios",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"idServicio\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"destiono\": \"<string>\",\n  \"fechaServicio\": \"<dateTime>\",\n  \"costo\": \"<double>\",\n  \"tipoServicio\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "eliminar Servicio",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/servicios/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"servicios",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/servicios/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"servicios",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "tipo-de-servicios",
+					"item": [
+						{
+							"name": "tipos De Servicio",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/servicios/tipo-de-servicios",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"servicios",
+										"tipo-de-servicios"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/servicios/tipo-de-servicios",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"servicios",
+												"tipo-de-servicios"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  \"HOTEL_POR_NOCHE\",\n  \"PASAJES_DE_AVION\"\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "listar Servicios",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/servicios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"servicios"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/servicios",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"servicios"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"idServicio\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"tipoServicio\": \"<string>\"\n  },\n  {\n    \"idServicio\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"tipoServicio\": \"<string>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idServicio\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"destiono\": \"<string>\",\n  \"fechaServicio\": \"<dateTime>\",\n  \"costo\": \"<double>\",\n  \"tipoServicio\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/servicios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"servicios"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idServicio\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"destiono\": \"<string>\",\n  \"fechaServicio\": \"<dateTime>\",\n  \"costo\": \"<double>\",\n  \"tipoServicio\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/servicios",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"servicios"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"idServicio\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"destiono\": \"<string>\",\n  \"fechaServicio\": \"<dateTime>\",\n  \"costo\": \"<double>\",\n  \"tipoServicio\": \"<string>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "paquetes",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "obtener Paquete",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/paquetes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"paquetes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/paquetes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"paquetes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"idPaquete\": \"<string>\",\n  \"listaServicios\": [\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    },\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    }\n  ],\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"precio\": \"<double>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "actualizar Paquete",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idPaquete\": \"<string>\",\n  \"listaServicios\": [\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    },\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    }\n  ],\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"precio\": \"<double>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/paquetes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"paquetes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"idPaquete\": \"<string>\",\n  \"listaServicios\": [\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    },\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    }\n  ],\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"precio\": \"<double>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/paquetes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"paquetes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"idPaquete\": \"<string>\",\n  \"listaServicios\": [\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    },\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    }\n  ],\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"precio\": \"<double>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "eliminar Paquete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/paquetes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"paquetes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/paquetes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"paquetes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "listar Paquetes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/paquetes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"paquetes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/paquetes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"paquetes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\"\n  },\n  {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"tipoServicio\": \"<string>\"\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "crear 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idPaquete\": \"<string>\",\n  \"listaServicios\": [\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    },\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    }\n  ],\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"precio\": \"<double>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/paquetes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"paquetes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idPaquete\": \"<string>\",\n  \"listaServicios\": [\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    },\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    }\n  ],\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"precio\": \"<double>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/paquetes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"paquetes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"idPaquete\": \"<string>\",\n  \"listaServicios\": [\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    },\n    {\n      \"idServicio\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"tipoServicio\": \"<string>\"\n    }\n  ],\n  \"nombre\": \"<string>\",\n  \"descripcion\": \"<string>\",\n  \"precio\": \"<double>\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080/api/services"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

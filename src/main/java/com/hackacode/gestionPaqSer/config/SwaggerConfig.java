@@ -13,7 +13,7 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI usersMicroserviceOpenAPI() {
         return new OpenAPI()
-                .info(new Info().title("API REST")
+                .info(new Info().title("gestionPaqSer API")
                         .description("DESCRIPCION DE MI API REST")
                         .version("1.0")
                         .contact(new Contact().email("21jose03.free@gmail.com")
