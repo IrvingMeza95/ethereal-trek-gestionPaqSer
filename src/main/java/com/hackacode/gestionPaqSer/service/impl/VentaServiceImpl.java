@@ -1,5 +1,6 @@
 package com.hackacode.gestionPaqSer.service.impl;
 
+import com.hackacode.gestionPaqSer.clientes.UsuariosFeign;
 import com.hackacode.gestionPaqSer.entity.PaqueteEntity;
 import com.hackacode.gestionPaqSer.entity.ServicioEntity;
 import com.hackacode.gestionPaqSer.entity.VentaEntity;
@@ -25,12 +26,15 @@ public class VentaServiceImpl implements VentaService {
     private ServicioService servicioService;
     @Autowired
     private PaqueteService paqueteService;
+    @Autowired
+    private UsuariosFeign usuariosFeign;
 
     @Override
     public VentaEntity crearVenta(VentaEntity venta) throws MyException {
         setTotal(venta);
+        venta.setCliente(usuariosFeign.obtenerCliente(venta.getCliente().getId()));
+        venta.setEmpleado(usuariosFeign.obtenerEmpleado(venta.getEmpleado().getId()));
         VentaEntity ventaEntity = ventaRepository.save(venta);
-        ventaEntity = obtenerVenta(venta.getIdVenta());
 
         return ventaEntity;
     }
@@ -39,9 +43,11 @@ public class VentaServiceImpl implements VentaService {
         if (venta.getTipoVenta().equals(TipoDeVenta.SERVICIO.name())){
             ServicioEntity servicio = servicioService.obtenerServicio(venta.getServicio().getIdServicio());
             venta.setTotal(servicio.getCosto());
+            venta.setServicio(servicioService.obtenerServicio(venta.getServicio().getIdServicio()));
         }else{
             PaqueteEntity paquete = paqueteService.obtenerPaquete(venta.getPaquete().getIdPaquete());
             venta.setTotal(paquete.getPrecio());
+            venta.setPaquete(paqueteService.obtenerPaquete(venta.getPaquete().getIdPaquete()));
         }
         for (MediosDePago mp : MediosDePago.values()){
             if (mp.name().equals(venta.getMedioPago())){
