@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface PaqueteService {
-    public PaqueteEntity crearPaquete(PaqueteEntity paquete);
-    public PaqueteEntity obtenerPaquete(String idPaquete) throws MyException;
-    public List<PaqueteEntity> listarPaquetes();
-    public PaqueteEntity actualizarPaquete(PaqueteEntity paquete, String paqueteId) throws MyException;
-    public void eliminarPaquete(String paqueteId) throws MyException;
+    PaqueteEntity crearPaquete(PaqueteEntity paquete);
+    PaqueteEntity obtenerPaquete(String idPaquete) throws MyException;
+    List<PaqueteEntity> listarPaquetes();
+    PaqueteEntity actualizarPaquete(PaqueteEntity paquete, String paqueteId) throws MyException;
+    void eliminarPaquete(String paqueteId) throws MyException;
 }
