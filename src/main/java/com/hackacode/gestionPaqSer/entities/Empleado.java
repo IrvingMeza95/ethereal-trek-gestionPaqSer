@@ -13,8 +13,7 @@ import lombok.*;
 @Table(name = "empleados")
 public class Empleado extends Persona {
     @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private Cargo cargo;
+    private String cargo;
     @Column(nullable = false)
     private Double sueldo;
 }

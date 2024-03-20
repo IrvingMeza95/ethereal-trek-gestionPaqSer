@@ -13,7 +13,7 @@ import java.util.Set;
 @Builder
 public class PaqueteDTO {
     private String idPaquete;
-    private Set<String> listaServicios = new HashSet<>();
+    private List<String> listaServicios;
     private String nombre;
     private String descripcion;
     private Double precio;

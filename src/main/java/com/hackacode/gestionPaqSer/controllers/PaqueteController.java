@@ -49,9 +49,10 @@ public class PaqueteController {
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PutMapping("/{id}")
-    public ResponseEntity<Paquete> actualizarPaquete(@RequestBody Paquete paquete,
+    public ResponseEntity<PaqueteDTO> actualizarPaquete(@RequestBody Paquete paquete,
                                                      @PathVariable String id) throws MyException {
-            return new ResponseEntity<>(paqueteService.actualizarPaquete(paquete,id), HttpStatus.OK);
+            return new ResponseEntity<>(paqueteMapper.getPaqueteDTO(paqueteService.actualizarPaquete(paquete,id)),
+                    HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")

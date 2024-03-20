@@ -38,8 +38,9 @@ public class ServicioController {
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping("/{id}")
-    public ResponseEntity<Servicio> obtenerServicio(@PathVariable(value = "id") String idServicio) throws MyException {
-        return new ResponseEntity<>(servicioService.obtenerServicio(idServicio), HttpStatus.OK);
+    public ResponseEntity<ServicioDTO> obtenerServicio(@PathVariable(value = "id") String idServicio) throws MyException {
+        return new ResponseEntity<>(servicioMapper.getServicioDTO(servicioService.obtenerServicio(idServicio)),
+                HttpStatus.OK);
 
     }
 
@@ -52,8 +53,9 @@ public class ServicioController {
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PutMapping("/{id}")
-    public ResponseEntity<Servicio> actualizarServicio(@RequestBody Servicio servicio, @PathVariable String id) throws MyException {
-        return new ResponseEntity<>(servicioService.actualizarServicio(servicio,id), HttpStatus.OK);
+    public ResponseEntity<ServicioDTO> actualizarServicio(@RequestBody Servicio servicio, @PathVariable String id) throws MyException {
+        return new ResponseEntity<>(servicioMapper.getServicioDTO(servicioService.actualizarServicio(servicio,id)),
+                HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")

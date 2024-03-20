@@ -4,6 +4,7 @@ import com.hackacode.gestionPaqSer.dtos.PaqueteDTO;
 import com.hackacode.gestionPaqSer.entities.Paquete;
 import org.springframework.stereotype.Component;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -16,9 +17,9 @@ public class PaqueteMapper {
         paqueteDTO.setIdPaquete(paquete.getIdPaquete());
         if (!paquete.getListaServicios().isEmpty()){
             paqueteDTO.setListaServicios(
-                    (Set<String>) paquete.getListaServicios().stream().map(s -> {
-                        return s.getIdServicio();
-                    }).collect(Collectors.toList())
+                paquete.getListaServicios().stream().map(s -> {
+                    return s.getIdServicio();
+                }).collect(Collectors.toList())
             );
         }
         paqueteDTO.setNombre(paquete.getNombre());

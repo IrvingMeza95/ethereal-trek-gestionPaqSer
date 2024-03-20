@@ -1,10 +1,12 @@
 package com.hackacode.gestionPaqSer.controllers;
 
 import brave.Tracer;
+import com.hackacode.gestionPaqSer.dtos.VentaDTO;
 import com.hackacode.gestionPaqSer.entities.Venta;
 import com.hackacode.gestionPaqSer.enums.MediosDePago;
 import com.hackacode.gestionPaqSer.enums.TipoDeVenta;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
+import com.hackacode.gestionPaqSer.mappers.VentaMapper;
 import com.hackacode.gestionPaqSer.responses.ResponseMessage;
 import com.hackacode.gestionPaqSer.services.VentaService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
@@ -25,6 +27,8 @@ public class VentaController {
     private VentaService ventaService;
     @Autowired
     private Tracer tracer;
+    @Autowired
+    private VentaMapper ventaMapper;
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PostMapping
@@ -34,20 +38,23 @@ public class VentaController {
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping("/{id}")
-    public ResponseEntity<Venta> obtenerVenta(@PathVariable(value = "id") Integer idVenta) throws MyException {
-        return new ResponseEntity<>(ventaService.obtenerVenta(idVenta), HttpStatus.OK);
+    public ResponseEntity<VentaDTO> obtenerVenta(@PathVariable(value = "id") Integer idVenta) throws MyException {
+        return new ResponseEntity<>(ventaMapper.getVentaDTO(ventaService.obtenerVenta(idVenta)),
+                HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping
-    public ResponseEntity<List<Venta>> listarVentas() {
-        return new ResponseEntity<>(ventaService.listarVentas(), HttpStatus.OK);
+    public ResponseEntity<List<VentaDTO>> listarVentas() {
+        return new ResponseEntity<>(ventaMapper.getListaVentaDTO(ventaService.listarVentas()),
+                HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PutMapping("/{id}")
-    public ResponseEntity<Venta> actualizarVenta(@RequestBody Venta venta, @PathVariable Integer id) throws MyException {
-        return new ResponseEntity<>(ventaService.actualizarVenta(venta, id), HttpStatus.OK);
+    public ResponseEntity<VentaDTO> actualizarVenta(@RequestBody Venta venta, @PathVariable Integer id) throws MyException {
+        return new ResponseEntity<>(ventaMapper.getVentaDTO(ventaService.actualizarVenta(venta, id)),
+                HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
@@ -59,8 +66,8 @@ public class VentaController {
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping("/filtrar/{param}")
-    public ResponseEntity<List<Venta>> listarVentasFiltrado(@PathVariable String param){
-        return ResponseEntity.ok(ventaService.listarVentasFiltrado(param));
+    public ResponseEntity<List<VentaDTO>> listarVentasFiltrado(@PathVariable String param){
+        return ResponseEntity.ok(ventaMapper.getListaVentaDTO(ventaService.listarVentasFiltrado(param)));
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")

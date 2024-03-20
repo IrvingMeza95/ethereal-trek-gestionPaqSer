@@ -24,7 +24,7 @@ public class Paquete {
             name = "detalle_paquete_servicio",
             joinColumns = @JoinColumn(name = "id_paquete"),
             inverseJoinColumns = @JoinColumn(name = "id_servicio"))
-    private Set<Servicio> listaServicios = new HashSet<>();
+    private List<Servicio> listaServicios;
     @Column(name = "nombre", nullable = false)
     private String nombre;
     @Column(name = "descripcion", nullable = false)
