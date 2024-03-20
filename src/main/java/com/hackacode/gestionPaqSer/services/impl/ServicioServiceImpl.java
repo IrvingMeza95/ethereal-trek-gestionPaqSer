@@ -1,12 +1,15 @@
-package com.hackacode.gestionPaqSer.service.impl;
+package com.hackacode.gestionPaqSer.services.impl;
 
-import com.hackacode.gestionPaqSer.entity.ServicioEntity;
+import com.hackacode.gestionPaqSer.entities.FileEntity;
+import com.hackacode.gestionPaqSer.entities.ServicioEntity;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
-import com.hackacode.gestionPaqSer.repository.ServicioRepository;
-import com.hackacode.gestionPaqSer.service.ServicioService;
+import com.hackacode.gestionPaqSer.repositories.ServicioRepository;
+import com.hackacode.gestionPaqSer.services.FileService;
+import com.hackacode.gestionPaqSer.services.ServicioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,6 +18,8 @@ public class ServicioServiceImpl implements ServicioService {
 
     @Autowired
     private ServicioRepository servicioRepository;
+    @Autowired
+    private FileService fileService;
 
     @Override
     public ServicioEntity crearServicio(ServicioEntity servicio) {
@@ -49,6 +54,22 @@ public class ServicioServiceImpl implements ServicioService {
     public void eliminarServicio(String servicioId) throws MyException {
         ServicioEntity servicio = obtenerServicio(servicioId);
         servicioRepository.delete(servicio);
+    }
+
+    @Override
+    public void actualizarImagenPrincipal(String servicioId, String imagenId) throws FileNotFoundException, MyException {
+        ServicioEntity servicio = obtenerServicio(servicioId);
+        FileEntity fileEntity = fileService.getFile(imagenId);
+        servicio.setImagenPrincipal(fileEntity);
+        servicioRepository.save(servicio);
+    }
+
+    @Override
+    public void agregarImagen(String servicioId, String imagenId) throws MyException, FileNotFoundException {
+        ServicioEntity servicio = obtenerServicio(servicioId);
+        FileEntity fileEntity = fileService.getFile(imagenId);
+        servicio.getImagenes().add(fileEntity);
+        servicioRepository.save(servicio);
     }
 
 }

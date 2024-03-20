@@ -1,4 +1,4 @@
-package com.hackacode.gestionPaqSer.entity;
+package com.hackacode.gestionPaqSer.entities;
 
 import com.hackacode.gestionPaqSer.enums.Cargo;
 import jakarta.persistence.*;

@@ -1,4 +1,4 @@
-package com.hackacode.gestionPaqSer.entity;
+package com.hackacode.gestionPaqSer.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;

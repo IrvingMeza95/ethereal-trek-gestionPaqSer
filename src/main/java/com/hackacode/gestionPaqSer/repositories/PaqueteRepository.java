@@ -1,6 +1,6 @@
-package com.hackacode.gestionPaqSer.repository;
+package com.hackacode.gestionPaqSer.repositories;
 
-import com.hackacode.gestionPaqSer.entity.PaqueteEntity;
+import com.hackacode.gestionPaqSer.entities.PaqueteEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

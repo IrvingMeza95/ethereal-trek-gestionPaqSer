@@ -1,10 +1,10 @@
-package com.hackacode.gestionPaqSer.controller;
+package com.hackacode.gestionPaqSer.controllers;
 
 import brave.Tracer;
-import com.hackacode.gestionPaqSer.entity.PaqueteEntity;
+import com.hackacode.gestionPaqSer.entities.PaqueteEntity;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
 import com.hackacode.gestionPaqSer.responses.ResponseMessage;
-import com.hackacode.gestionPaqSer.service.PaqueteService;
+import com.hackacode.gestionPaqSer.services.PaqueteService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 @RestController
@@ -38,11 +39,7 @@ public class PaqueteController {
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping
     public ResponseEntity<List<PaqueteEntity>> listarPaquetes() {
-        try {
-            return new ResponseEntity<>(paqueteService.listarPaquetes(), HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+        return new ResponseEntity<>(paqueteService.listarPaquetes(), HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
@@ -57,6 +54,18 @@ public class PaqueteController {
     public ResponseEntity<String> eliminarPaquete(@PathVariable(value = "id") String idPaquete) throws MyException {
         paqueteService.eliminarPaquete(idPaquete);
         return new ResponseEntity<>("Paquete Eliminado", HttpStatus.OK);
+    }
+
+    @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
+    @PutMapping("/actualizar-imagen-principal")
+    public void actualizarImagenPrincipal(@RequestParam String paqueteId, @RequestParam String imagenId) throws MyException, FileNotFoundException {
+        paqueteService.actualizarImagenPrincipal(paqueteId,imagenId);
+    }
+
+    @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
+    @PutMapping("/agregar-imagen")
+    public void agregarImagen(@RequestParam String paqueteId, @RequestParam String imagenId) throws MyException, FileNotFoundException {
+        paqueteService.agregarImagen(paqueteId,imagenId);
     }
 
     public ResponseEntity<ResponseMessage> metodoAlternativo(Throwable e){

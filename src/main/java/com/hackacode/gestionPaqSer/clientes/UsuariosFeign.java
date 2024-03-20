@@ -1,7 +1,7 @@
 package com.hackacode.gestionPaqSer.clientes;
 
-import com.hackacode.gestionPaqSer.entity.ClienteEntity;
-import com.hackacode.gestionPaqSer.entity.EmpleadoEntity;
+import com.hackacode.gestionPaqSer.entities.ClienteEntity;
+import com.hackacode.gestionPaqSer.entities.EmpleadoEntity;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

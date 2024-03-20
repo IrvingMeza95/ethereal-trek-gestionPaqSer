@@ -1,13 +1,10 @@
-package com.hackacode.gestionPaqSer.entity;
+package com.hackacode.gestionPaqSer.entities;
 
-import com.hackacode.gestionPaqSer.enums.MediosDePago;
-import com.hackacode.gestionPaqSer.enums.TipoDeVenta;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.sql.rowset.serial.SerialStruct;
 import java.sql.Date;
 
 @Data

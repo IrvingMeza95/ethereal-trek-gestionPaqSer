@@ -1,6 +1,6 @@
-package com.hackacode.gestionPaqSer.service;
+package com.hackacode.gestionPaqSer.services;
 
-import com.hackacode.gestionPaqSer.entity.VentaEntity;
+import com.hackacode.gestionPaqSer.entities.VentaEntity;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
 
 import java.util.List;

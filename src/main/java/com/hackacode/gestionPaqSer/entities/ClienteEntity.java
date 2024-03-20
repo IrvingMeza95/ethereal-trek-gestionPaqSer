@@ -1,4 +1,4 @@
-package com.hackacode.gestionPaqSer.entity;
+package com.hackacode.gestionPaqSer.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

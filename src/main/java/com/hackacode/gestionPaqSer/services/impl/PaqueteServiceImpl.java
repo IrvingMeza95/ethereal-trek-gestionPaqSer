@@ -1,12 +1,15 @@
-package com.hackacode.gestionPaqSer.service.impl;
+package com.hackacode.gestionPaqSer.services.impl;
 
-import com.hackacode.gestionPaqSer.entity.PaqueteEntity;
+import com.hackacode.gestionPaqSer.entities.FileEntity;
+import com.hackacode.gestionPaqSer.entities.PaqueteEntity;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
-import com.hackacode.gestionPaqSer.repository.PaqueteRepository;
-import com.hackacode.gestionPaqSer.service.PaqueteService;
+import com.hackacode.gestionPaqSer.repositories.PaqueteRepository;
+import com.hackacode.gestionPaqSer.services.FileService;
+import com.hackacode.gestionPaqSer.services.PaqueteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,6 +18,8 @@ public class PaqueteServiceImpl implements PaqueteService {
 
     @Autowired
     private PaqueteRepository paqueteRepository;
+    @Autowired
+    private FileService fileService;
 
     @Override
     public PaqueteEntity crearPaquete(PaqueteEntity paquete) {
@@ -28,7 +33,7 @@ public class PaqueteServiceImpl implements PaqueteService {
             paquete.setPrecio(paquete.getPrecio() +
                     Double.valueOf(paqueteRepository.extraerPrecioDeServicio(s.getIdServicio())));
         });
-        paquete.setPrecio(paquete.getPrecio() * .9);
+        paquete.setPrecio(Math.round((paquete.getPrecio() * .9) * 100.0) / 100.0);
     }
 
     @Override
@@ -58,6 +63,22 @@ public class PaqueteServiceImpl implements PaqueteService {
     public void eliminarPaquete(String paqueteId) throws MyException {
         PaqueteEntity paquete = obtenerPaquete(paqueteId);
         paqueteRepository.delete(paquete);
+    }
+
+    @Override
+    public void actualizarImagenPrincipal(String paqueteId, String imagenId) throws MyException, FileNotFoundException {
+        PaqueteEntity paquete = obtenerPaquete(paqueteId);
+        FileEntity fileEntity = fileService.getFile(imagenId);
+        paquete.setImagenPrincipal(fileEntity);
+        paqueteRepository.save(paquete);
+    }
+
+    @Override
+    public void agregarImagen(String paqueteId, String imagenId) throws MyException, FileNotFoundException {
+        PaqueteEntity paquete = obtenerPaquete(paqueteId);
+        FileEntity fileEntity = fileService.getFile(imagenId);
+        paquete.getImagenes().add(fileEntity);
+        paqueteRepository.save(paquete);
     }
 
 }

@@ -1,16 +1,16 @@
-package com.hackacode.gestionPaqSer.service.impl;
+package com.hackacode.gestionPaqSer.services.impl;
 
 import com.hackacode.gestionPaqSer.clientes.UsuariosFeign;
-import com.hackacode.gestionPaqSer.entity.PaqueteEntity;
-import com.hackacode.gestionPaqSer.entity.ServicioEntity;
-import com.hackacode.gestionPaqSer.entity.VentaEntity;
+import com.hackacode.gestionPaqSer.entities.PaqueteEntity;
+import com.hackacode.gestionPaqSer.entities.ServicioEntity;
+import com.hackacode.gestionPaqSer.entities.VentaEntity;
 import com.hackacode.gestionPaqSer.enums.MediosDePago;
 import com.hackacode.gestionPaqSer.enums.TipoDeVenta;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
-import com.hackacode.gestionPaqSer.repository.VentaRepository;
-import com.hackacode.gestionPaqSer.service.PaqueteService;
-import com.hackacode.gestionPaqSer.service.ServicioService;
-import com.hackacode.gestionPaqSer.service.VentaService;
+import com.hackacode.gestionPaqSer.repositories.VentaRepository;
+import com.hackacode.gestionPaqSer.services.PaqueteService;
+import com.hackacode.gestionPaqSer.services.ServicioService;
+import com.hackacode.gestionPaqSer.services.VentaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,7 +51,7 @@ public class VentaServiceImpl implements VentaService {
         }
         for (MediosDePago mp : MediosDePago.values()){
             if (mp.name().equals(venta.getMedioPago())){
-                venta.setTotal(venta.getTotal() * (1 + mp.getComision()));
+                venta.setTotal(Math.round((venta.getTotal() * (1 + mp.getComision())) * 100.0) / 100.0);
                 break;
             }
         }

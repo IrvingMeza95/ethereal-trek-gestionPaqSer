@@ -1,10 +1,10 @@
-package com.hackacode.gestionPaqSer.service;
+package com.hackacode.gestionPaqSer.services;
 
-import com.hackacode.gestionPaqSer.entity.ServicioEntity;
+import com.hackacode.gestionPaqSer.entities.ServicioEntity;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
 
+import java.io.FileNotFoundException;
 import java.util.List;
-import java.util.Optional;
 
 public interface ServicioService {
     ServicioEntity crearServicio(ServicioEntity servicio);
@@ -12,4 +12,6 @@ public interface ServicioService {
     List<ServicioEntity> listarServicios();
     ServicioEntity actualizarServicio(ServicioEntity nuevoServicio, String id) throws MyException;
     void eliminarServicio(String servicioId) throws MyException;
+    void actualizarImagenPrincipal(String servicioId, String imagenId) throws FileNotFoundException, MyException;
+    void agregarImagen(String servicioId, String imagenId) throws MyException, FileNotFoundException;
 }

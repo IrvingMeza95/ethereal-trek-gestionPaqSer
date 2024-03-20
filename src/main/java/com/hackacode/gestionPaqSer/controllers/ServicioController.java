@@ -1,11 +1,11 @@
-package com.hackacode.gestionPaqSer.controller;
+package com.hackacode.gestionPaqSer.controllers;
 
 import brave.Tracer;
-import com.hackacode.gestionPaqSer.entity.ServicioEntity;
+import com.hackacode.gestionPaqSer.entities.ServicioEntity;
 import com.hackacode.gestionPaqSer.enums.TipoDeServicio;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
 import com.hackacode.gestionPaqSer.responses.ResponseMessage;
-import com.hackacode.gestionPaqSer.service.ServicioService;
+import com.hackacode.gestionPaqSer.services.ServicioService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 @RestController
@@ -61,6 +62,18 @@ public class ServicioController {
     @GetMapping("/tipo-de-servicios")
     public ResponseEntity<List<TipoDeServicio>> tiposDeServicio(){
         return ResponseEntity.ok(List.of(TipoDeServicio.values()));
+    }
+
+    @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
+    @PutMapping("/actualizar-imagen-principal")
+    public void actualizarImagenPrincipal(@RequestParam String servicioId, @RequestParam String imagenId) throws MyException, FileNotFoundException {
+        servicioService.actualizarImagenPrincipal(servicioId,imagenId);
+    }
+
+    @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
+    @PutMapping("/agregar-imagen")
+    public void agregarImagen(@RequestParam String servicioId, @RequestParam String imagenId) throws MyException, FileNotFoundException {
+        servicioService.agregarImagen(servicioId,imagenId);
     }
 
     public ResponseEntity<ResponseMessage> metodoAlternativo(Throwable e){

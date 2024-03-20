@@ -1,12 +1,12 @@
-package com.hackacode.gestionPaqSer.controller;
+package com.hackacode.gestionPaqSer.controllers;
 
 import brave.Tracer;
-import com.hackacode.gestionPaqSer.entity.VentaEntity;
+import com.hackacode.gestionPaqSer.entities.VentaEntity;
 import com.hackacode.gestionPaqSer.enums.MediosDePago;
 import com.hackacode.gestionPaqSer.enums.TipoDeVenta;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
 import com.hackacode.gestionPaqSer.responses.ResponseMessage;
-import com.hackacode.gestionPaqSer.service.VentaService;
+import com.hackacode.gestionPaqSer.services.VentaService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

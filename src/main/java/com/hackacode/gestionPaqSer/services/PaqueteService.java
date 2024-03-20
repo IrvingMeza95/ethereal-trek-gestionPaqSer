@@ -1,10 +1,10 @@
-package com.hackacode.gestionPaqSer.service;
+package com.hackacode.gestionPaqSer.services;
 
-import com.hackacode.gestionPaqSer.entity.PaqueteEntity;
+import com.hackacode.gestionPaqSer.entities.PaqueteEntity;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
 
+import java.io.FileNotFoundException;
 import java.util.List;
-import java.util.Optional;
 
 public interface PaqueteService {
     PaqueteEntity crearPaquete(PaqueteEntity paquete);
@@ -12,4 +12,6 @@ public interface PaqueteService {
     List<PaqueteEntity> listarPaquetes();
     PaqueteEntity actualizarPaquete(PaqueteEntity paquete, String paqueteId) throws MyException;
     void eliminarPaquete(String paqueteId) throws MyException;
+    void actualizarImagenPrincipal(String paqueteId, String imagenId) throws MyException, FileNotFoundException;
+    void agregarImagen(String paqueteId, String imagenId) throws MyException, FileNotFoundException;
 }
