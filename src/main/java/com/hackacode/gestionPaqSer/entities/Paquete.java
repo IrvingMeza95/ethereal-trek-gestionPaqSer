@@ -14,7 +14,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @Table(name = "paquetes")
-public class PaqueteEntity {
+public class Paquete {
     @Id
     @GeneratedValue(generator = "uuid")
     @Column(name = "id_paquete")
@@ -24,7 +24,7 @@ public class PaqueteEntity {
             name = "detalle_paquete_servicio",
             joinColumns = @JoinColumn(name = "id_paquete"),
             inverseJoinColumns = @JoinColumn(name = "id_servicio"))
-    private Set<ServicioEntity> listaServicios = new HashSet<>();
+    private Set<Servicio> listaServicios = new HashSet<>();
     @Column(name = "nombre", nullable = false)
     private String nombre;
     @Column(name = "descripcion", nullable = false)
@@ -35,8 +35,8 @@ public class PaqueteEntity {
     @JoinTable(name = "paquetes_imagenes",
             joinColumns = @JoinColumn(name = "id_paquete"),
             inverseJoinColumns = @JoinColumn(name = "id_imagen"))
-    private List<FileEntity> imagenes;
+    private List<File> imagenes;
     @OneToOne
     @JoinColumn(name = "id_imagen_principal")
-    private FileEntity imagenPrincipal;
+    private File imagenPrincipal;
 }

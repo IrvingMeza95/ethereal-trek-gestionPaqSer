@@ -13,7 +13,7 @@ import org.hibernate.annotations.GenericGenerator;
 @NoArgsConstructor
 @AllArgsConstructor
 @MappedSuperclass
-public abstract class PersonaEntity {
+public abstract class Persona {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
@@ -36,4 +36,6 @@ public abstract class PersonaEntity {
     private String password;
     @Column(nullable = true, length = 250)
     private String direccion;
+    @Column(nullable = false)
+    private Boolean enabled;
 }

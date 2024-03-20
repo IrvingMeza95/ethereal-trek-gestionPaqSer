@@ -1,7 +1,7 @@
 package com.hackacode.gestionPaqSer.controllers;
 
 import brave.Tracer;
-import com.hackacode.gestionPaqSer.entities.FileEntity;
+import com.hackacode.gestionPaqSer.entities.File;
 import com.hackacode.gestionPaqSer.responses.ResponseFile;
 import com.hackacode.gestionPaqSer.responses.ResponseMessage;
 import com.hackacode.gestionPaqSer.services.FileService;
@@ -30,27 +30,27 @@ public class FileController {
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PostMapping
-    public ResponseEntity<ResponseMessage> uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
+    public ResponseEntity<ResponseMessage> subir(@RequestParam("file") MultipartFile file) throws IOException {
         if (file.getContentType() == null){
             throw new IOException();
         }
         fileService.store(file);
-        return ResponseEntity.status(HttpStatus.OK).body(new  ResponseMessage("File has been upload correctly."));
+        return ResponseEntity.status(HttpStatus.OK).body(new  ResponseMessage("Archivo subido correctamente."));
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping("/{id}")
-    public ResponseEntity<byte[]> getFile(@PathVariable String id) throws FileNotFoundException {
-        FileEntity fileEntity = fileService.getFile(id);
+    public ResponseEntity<byte[]> verArchivo(@PathVariable String id) throws FileNotFoundException {
+        File file = fileService.getFile(id);
         return ResponseEntity.status(HttpStatus.OK)
-                .header(HttpHeaders.CONTENT_TYPE, fileEntity.getType())
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + fileEntity.getName() + "\"")
-                .body(fileEntity.getData());
+                .header(HttpHeaders.CONTENT_TYPE, file.getType())
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getName() + "\"")
+                .body(file.getData());
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping("/files-paths")
-    public ResponseEntity<List<ResponseFile>> getFileList(){
+    public ResponseEntity<List<ResponseFile>> listarArchivos(){
         List<ResponseFile> files = fileService.getFiles();
         return ResponseEntity.status(HttpStatus.OK).body(files);
     }

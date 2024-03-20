@@ -12,7 +12,7 @@ import java.sql.Date;
 @NoArgsConstructor
 @Entity
 @Table(name = "ventas")
-public class VentaEntity {
+public class Venta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,19 +21,19 @@ public class VentaEntity {
 
     @ManyToOne
     @JoinColumn(name = "id_cliente", nullable = false)
-    private ClienteEntity cliente;
+    private Cliente cliente;
 
     @ManyToOne
     @JoinColumn(name = "id_empleado", nullable = false)
-    private EmpleadoEntity empleado;
+    private Empleado empleado;
 
     @ManyToOne
     @JoinColumn(name = "id_servicio", nullable = true)
-    private ServicioEntity servicio;
+    private Servicio servicio;
 
     @ManyToOne
     @JoinColumn(name = "id_paquete", nullable = true)
-    private PaqueteEntity paquete;
+    private Paquete paquete;
 
     @Column(name = "tipo_venta", nullable = false)
     private String tipoVenta;

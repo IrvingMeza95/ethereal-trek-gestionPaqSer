@@ -1,9 +1,11 @@
 package com.hackacode.gestionPaqSer.controllers;
 
 import brave.Tracer;
-import com.hackacode.gestionPaqSer.entities.ServicioEntity;
+import com.hackacode.gestionPaqSer.dtos.ServicioDTO;
+import com.hackacode.gestionPaqSer.entities.Servicio;
 import com.hackacode.gestionPaqSer.enums.TipoDeServicio;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
+import com.hackacode.gestionPaqSer.mappers.ServicioMapper;
 import com.hackacode.gestionPaqSer.responses.ResponseMessage;
 import com.hackacode.gestionPaqSer.services.ServicioService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
@@ -25,30 +27,33 @@ public class ServicioController {
     private ServicioService servicioService;
     @Autowired
     private Tracer tracer;
+    @Autowired
+    private ServicioMapper servicioMapper;
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PostMapping
-    public ResponseEntity<ServicioEntity> crear(@RequestBody ServicioEntity servicio){
+    public ResponseEntity<Servicio> crear(@RequestBody Servicio servicio){
         return ResponseEntity.ok(servicioService.crearServicio(servicio));
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping("/{id}")
-    public ResponseEntity<ServicioEntity> obtenerServicio(@PathVariable(value = "id") String idServicio) throws MyException {
+    public ResponseEntity<Servicio> obtenerServicio(@PathVariable(value = "id") String idServicio) throws MyException {
         return new ResponseEntity<>(servicioService.obtenerServicio(idServicio), HttpStatus.OK);
 
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping
-    public ResponseEntity<List<ServicioEntity>> listarServicios() {
-        return new ResponseEntity<>(servicioService.listarServicios(), HttpStatus.OK);
+    public ResponseEntity<List<ServicioDTO>> listarServicios() {
+        return new ResponseEntity<>(servicioMapper.getListSErvicioDTO(servicioService.listarServicios())
+                , HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PutMapping("/{id}")
-    public ResponseEntity<ServicioEntity> actualizarServicio(@RequestBody ServicioEntity servicioEntity, @PathVariable String id) throws MyException {
-        return new ResponseEntity<>(servicioService.actualizarServicio(servicioEntity,id), HttpStatus.OK);
+    public ResponseEntity<Servicio> actualizarServicio(@RequestBody Servicio servicio, @PathVariable String id) throws MyException {
+        return new ResponseEntity<>(servicioService.actualizarServicio(servicio,id), HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")

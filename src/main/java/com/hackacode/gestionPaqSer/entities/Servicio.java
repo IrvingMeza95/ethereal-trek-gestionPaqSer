@@ -7,14 +7,13 @@ import lombok.NoArgsConstructor;
 
 import java.sql.Date;
 import java.util.List;
-import java.util.Set;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "servicios")
-public class ServicioEntity {
+public class Servicio {
     @Id
     @GeneratedValue(generator = "uuid")
     @Column(name = "id_servicio")
@@ -33,8 +32,8 @@ public class ServicioEntity {
     @JoinTable(name = "servicios_imagenes",
             joinColumns = @JoinColumn(name = "id_servicio"),
             inverseJoinColumns = @JoinColumn(name = "id_imagen"))
-    private List<FileEntity> imagenes;
+    private List<File> imagenes;
     @OneToOne
     @JoinColumn(name = "id_imagen_principal")
-    private FileEntity imagenPrincipal;
+    private File imagenPrincipal;
 }

@@ -8,5 +8,5 @@ import lombok.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "clientes")
-public class ClienteEntity extends PersonaEntity {
+public class Cliente extends Persona {
 }

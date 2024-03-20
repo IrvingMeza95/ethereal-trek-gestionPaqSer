@@ -1,7 +1,7 @@
 package com.hackacode.gestionPaqSer.services.impl;
 
-import com.hackacode.gestionPaqSer.entities.FileEntity;
-import com.hackacode.gestionPaqSer.entities.PaqueteEntity;
+import com.hackacode.gestionPaqSer.entities.File;
+import com.hackacode.gestionPaqSer.entities.Paquete;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
 import com.hackacode.gestionPaqSer.repositories.PaqueteRepository;
 import com.hackacode.gestionPaqSer.services.FileService;
@@ -22,12 +22,12 @@ public class PaqueteServiceImpl implements PaqueteService {
     private FileService fileService;
 
     @Override
-    public PaqueteEntity crearPaquete(PaqueteEntity paquete) {
+    public Paquete crearPaquete(Paquete paquete) {
         calcularPrecio(paquete);
         return paqueteRepository.save(paquete);
     }
 
-    private void calcularPrecio(PaqueteEntity paquete) {
+    private void calcularPrecio(Paquete paquete) {
         paquete.setPrecio(0D);
         paquete.getListaServicios().forEach(s -> {
             paquete.setPrecio(paquete.getPrecio() +
@@ -37,21 +37,21 @@ public class PaqueteServiceImpl implements PaqueteService {
     }
 
     @Override
-    public PaqueteEntity obtenerPaquete(String idPaquete) throws MyException {
-        Optional<PaqueteEntity> paquete = paqueteRepository.findById(idPaquete);
+    public Paquete obtenerPaquete(String idPaquete) throws MyException {
+        Optional<Paquete> paquete = paqueteRepository.findById(idPaquete);
         if (paquete.isEmpty())
             throw new MyException("No se há podido cargar el paquete.");
         return paquete.get();
     }
 
     @Override
-    public List<PaqueteEntity> listarPaquetes() {
+    public List<Paquete> listarPaquetes() {
         return paqueteRepository.findAll();
     }
 
     @Override
-    public PaqueteEntity actualizarPaquete(PaqueteEntity nuevoPaquete, String paqueteId) throws MyException {
-        PaqueteEntity paquete = obtenerPaquete(paqueteId);
+    public Paquete actualizarPaquete(Paquete nuevoPaquete, String paqueteId) throws MyException {
+        Paquete paquete = obtenerPaquete(paqueteId);
         paquete.setListaServicios(nuevoPaquete.getListaServicios());
         paquete.setNombre(nuevoPaquete.getNombre());
         paquete.setDescripcion(nuevoPaquete.getDescripcion());
@@ -61,23 +61,23 @@ public class PaqueteServiceImpl implements PaqueteService {
 
     @Override
     public void eliminarPaquete(String paqueteId) throws MyException {
-        PaqueteEntity paquete = obtenerPaquete(paqueteId);
+        Paquete paquete = obtenerPaquete(paqueteId);
         paqueteRepository.delete(paquete);
     }
 
     @Override
     public void actualizarImagenPrincipal(String paqueteId, String imagenId) throws MyException, FileNotFoundException {
-        PaqueteEntity paquete = obtenerPaquete(paqueteId);
-        FileEntity fileEntity = fileService.getFile(imagenId);
-        paquete.setImagenPrincipal(fileEntity);
+        Paquete paquete = obtenerPaquete(paqueteId);
+        File file = fileService.getFile(imagenId);
+        paquete.setImagenPrincipal(file);
         paqueteRepository.save(paquete);
     }
 
     @Override
     public void agregarImagen(String paqueteId, String imagenId) throws MyException, FileNotFoundException {
-        PaqueteEntity paquete = obtenerPaquete(paqueteId);
-        FileEntity fileEntity = fileService.getFile(imagenId);
-        paquete.getImagenes().add(fileEntity);
+        Paquete paquete = obtenerPaquete(paqueteId);
+        File file = fileService.getFile(imagenId);
+        paquete.getImagenes().add(file);
         paqueteRepository.save(paquete);
     }
 

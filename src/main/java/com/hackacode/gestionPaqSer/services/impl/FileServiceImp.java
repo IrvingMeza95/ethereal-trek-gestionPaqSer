@@ -1,6 +1,6 @@
 package com.hackacode.gestionPaqSer.services.impl;
 
-import com.hackacode.gestionPaqSer.entities.FileEntity;
+import com.hackacode.gestionPaqSer.entities.File;
 import com.hackacode.gestionPaqSer.repositories.FileRepository;
 import com.hackacode.gestionPaqSer.responses.ResponseFile;
 import com.hackacode.gestionPaqSer.services.FileService;
@@ -22,9 +22,9 @@ public class FileServiceImp implements FileService {
     private FileRepository fileRepository;
 
     @Override
-    public FileEntity store(MultipartFile file) throws IOException {
+    public File store(MultipartFile file) throws IOException {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-        FileEntity fileEntity = FileEntity.builder()
+        File fileEntity = File.builder()
                 .name(fileName)
                 .type(file.getContentType())
                 .data(file.getBytes())
@@ -33,8 +33,8 @@ public class FileServiceImp implements FileService {
     }
 
     @Override
-    public FileEntity getFile(String id) throws FileNotFoundException {
-        Optional<FileEntity> file = fileRepository.findById(id);
+    public File getFile(String id) throws FileNotFoundException {
+        Optional<File> file = fileRepository.findById(id);
         if (file.isPresent()){
             return file.get();
         }

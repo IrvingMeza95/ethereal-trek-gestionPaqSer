@@ -1,8 +1,10 @@
 package com.hackacode.gestionPaqSer.controllers;
 
 import brave.Tracer;
-import com.hackacode.gestionPaqSer.entities.PaqueteEntity;
+import com.hackacode.gestionPaqSer.dtos.PaqueteDTO;
+import com.hackacode.gestionPaqSer.entities.Paquete;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
+import com.hackacode.gestionPaqSer.mappers.PaqueteMapper;
 import com.hackacode.gestionPaqSer.responses.ResponseMessage;
 import com.hackacode.gestionPaqSer.services.PaqueteService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
@@ -24,29 +26,32 @@ public class PaqueteController {
     private PaqueteService paqueteService;
     @Autowired
     private Tracer tracer;
+    @Autowired
+    private PaqueteMapper paqueteMapper;
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PostMapping
-    public ResponseEntity<PaqueteEntity> crear(@RequestBody PaqueteEntity paquete){
+    public ResponseEntity<Paquete> crear(@RequestBody Paquete paquete){
         return ResponseEntity.ok(paqueteService.crearPaquete(paquete));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<PaqueteEntity> obtenerPaquete(@PathVariable(value = "id") String idPaquete) throws MyException {
+    public ResponseEntity<Paquete> obtenerPaquete(@PathVariable(value = "id") String idPaquete) throws MyException {
         return new ResponseEntity<>(paqueteService.obtenerPaquete(idPaquete), HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping
-    public ResponseEntity<List<PaqueteEntity>> listarPaquetes() {
-        return new ResponseEntity<>(paqueteService.listarPaquetes(), HttpStatus.OK);
+    public ResponseEntity<List<PaqueteDTO>> listarPaquetes() {
+        return new ResponseEntity<>(paqueteMapper.getListaPaqueteDTO(paqueteService.listarPaquetes())
+                , HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PutMapping("/{id}")
-    public ResponseEntity<PaqueteEntity> actualizarPaquete(@RequestBody PaqueteEntity paqueteEntity,
-                                                           @PathVariable String id) throws MyException {
-            return new ResponseEntity<>(paqueteService.actualizarPaquete(paqueteEntity,id), HttpStatus.OK);
+    public ResponseEntity<Paquete> actualizarPaquete(@RequestBody Paquete paquete,
+                                                     @PathVariable String id) throws MyException {
+            return new ResponseEntity<>(paqueteService.actualizarPaquete(paquete,id), HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")

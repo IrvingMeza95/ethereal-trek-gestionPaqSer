@@ -11,7 +11,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "empleados")
-public class EmpleadoEntity extends PersonaEntity {
+public class Empleado extends Persona {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Cargo cargo;

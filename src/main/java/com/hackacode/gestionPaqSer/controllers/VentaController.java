@@ -1,7 +1,7 @@
 package com.hackacode.gestionPaqSer.controllers;
 
 import brave.Tracer;
-import com.hackacode.gestionPaqSer.entities.VentaEntity;
+import com.hackacode.gestionPaqSer.entities.Venta;
 import com.hackacode.gestionPaqSer.enums.MediosDePago;
 import com.hackacode.gestionPaqSer.enums.TipoDeVenta;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
@@ -28,26 +28,26 @@ public class VentaController {
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PostMapping
-    public ResponseEntity<VentaEntity> crearVenta(@RequestBody VentaEntity venta) throws MyException {
+    public ResponseEntity<Venta> crearVenta(@RequestBody Venta venta) throws MyException {
         return new ResponseEntity<>(ventaService.crearVenta(venta), HttpStatus.CREATED);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping("/{id}")
-    public ResponseEntity<VentaEntity> obtenerVenta(@PathVariable(value = "id") Integer idVenta) throws MyException {
+    public ResponseEntity<Venta> obtenerVenta(@PathVariable(value = "id") Integer idVenta) throws MyException {
         return new ResponseEntity<>(ventaService.obtenerVenta(idVenta), HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping
-    public ResponseEntity<List<VentaEntity>> listarVentas() {
+    public ResponseEntity<List<Venta>> listarVentas() {
         return new ResponseEntity<>(ventaService.listarVentas(), HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PutMapping("/{id}")
-    public ResponseEntity<VentaEntity> actualizarVenta(@RequestBody VentaEntity ventaEntity, @PathVariable Integer id) throws MyException {
-        return new ResponseEntity<>(ventaService.actualizarVenta(ventaEntity, id), HttpStatus.OK);
+    public ResponseEntity<Venta> actualizarVenta(@RequestBody Venta venta, @PathVariable Integer id) throws MyException {
+        return new ResponseEntity<>(ventaService.actualizarVenta(venta, id), HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
@@ -59,7 +59,7 @@ public class VentaController {
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping("/filtrar/{param}")
-    public ResponseEntity<List<VentaEntity>> listarVentasFiltrado(@PathVariable String param){
+    public ResponseEntity<List<Venta>> listarVentasFiltrado(@PathVariable String param){
         return ResponseEntity.ok(ventaService.listarVentasFiltrado(param));
     }
 

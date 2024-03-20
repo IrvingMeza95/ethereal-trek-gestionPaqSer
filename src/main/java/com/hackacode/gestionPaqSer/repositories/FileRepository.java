@@ -1,7 +1,7 @@
 package com.hackacode.gestionPaqSer.repositories;
 
-import com.hackacode.gestionPaqSer.entities.FileEntity;
+import com.hackacode.gestionPaqSer.entities.File;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface FileRepository extends JpaRepository<FileEntity, String> {
+public interface FileRepository extends JpaRepository<File, String> {
 }
