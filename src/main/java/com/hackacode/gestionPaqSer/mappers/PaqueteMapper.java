@@ -2,6 +2,7 @@ package com.hackacode.gestionPaqSer.mappers;
 
 import com.hackacode.gestionPaqSer.dtos.PaqueteDTO;
 import com.hackacode.gestionPaqSer.entities.Paquete;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
@@ -12,13 +13,16 @@ import java.util.stream.Collectors;
 @Component
 public class PaqueteMapper {
 
+    @Autowired
+    private ServicioMapper servicioMapper;
+
     public PaqueteDTO getPaqueteDTO(Paquete paquete){
         PaqueteDTO paqueteDTO = new PaqueteDTO();
         paqueteDTO.setIdPaquete(paquete.getIdPaquete());
         if (!paquete.getListaServicios().isEmpty()){
             paqueteDTO.setListaServicios(
                 paquete.getListaServicios().stream().map(s -> {
-                    return s.getIdServicio();
+                    return servicioMapper.getServicioDTO(s);
                 }).collect(Collectors.toList())
             );
         }
