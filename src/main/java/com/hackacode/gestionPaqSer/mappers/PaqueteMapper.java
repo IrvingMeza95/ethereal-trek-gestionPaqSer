@@ -21,9 +21,7 @@ public class PaqueteMapper {
         paqueteDTO.setIdPaquete(paquete.getIdPaquete());
         if (!paquete.getListaServicios().isEmpty()){
             paqueteDTO.setListaServicios(
-                paquete.getListaServicios().stream().map(s -> {
-                    return servicioMapper.getServicioDTO(s);
-                }).collect(Collectors.toList())
+               servicioMapper.getListSErvicioDTO(paquete.getListaServicios())
             );
         }
         paqueteDTO.setNombre(paquete.getNombre());
