@@ -83,6 +83,27 @@ public class ServicioController {
         servicioService.agregarImagen(servicioId,imagenId);
     }
 
+    @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
+    @GetMapping("filtrar/tipo-de-servicio/{tipo}")
+    public ResponseEntity<List<ServicioDTO>> filtrarServicioPorTipoDeServicio(@PathVariable String tipo) {
+        return new ResponseEntity<>(servicioMapper.getListSErvicioDTO(servicioService.filtrarPorTipoDeServicio(tipo))
+                , HttpStatus.OK);
+    }
+
+    @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
+    @GetMapping("filtrar/descripcion/{descripcion}")
+    public ResponseEntity<List<ServicioDTO>> filtrarServicioPorDescripcion(@PathVariable String descripcion) {
+        return new ResponseEntity<>(servicioMapper.getListSErvicioDTO(servicioService.filtrarPorDescripcion(descripcion))
+                , HttpStatus.OK);
+    }
+
+    @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
+    @GetMapping("filtrar/destino/{destino}")
+    public ResponseEntity<List<ServicioDTO>> filtrarServicioPorDestino(@PathVariable String destino) {
+        return new ResponseEntity<>(servicioMapper.getListSErvicioDTO(servicioService.filtrarPorDestino(destino))
+                , HttpStatus.OK);
+    }
+
     public ResponseEntity<ResponseMessage> metodoAlternativo(Throwable e){
         String error = "";
         if (e.getMessage() != null){

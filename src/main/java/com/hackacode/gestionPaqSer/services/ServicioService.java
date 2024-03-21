@@ -14,4 +14,7 @@ public interface ServicioService {
     void eliminarServicio(String servicioId) throws MyException;
     void actualizarImagenPrincipal(String servicioId, String imagenId) throws FileNotFoundException, MyException;
     void agregarImagen(String servicioId, String imagenId) throws MyException, FileNotFoundException;
+    List<Servicio> filtrarPorTipoDeServicio(String tipo);
+    List<Servicio> filtrarPorDescripcion(String descripcion);
+    List<Servicio> filtrarPorDestino(String destino);
 }

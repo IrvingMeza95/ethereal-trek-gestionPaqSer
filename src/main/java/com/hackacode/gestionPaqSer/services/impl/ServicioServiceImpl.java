@@ -72,4 +72,19 @@ public class ServicioServiceImpl implements ServicioService {
         servicioRepository.save(servicio);
     }
 
+    @Override
+    public List<Servicio> filtrarPorTipoDeServicio(String tipo) {
+        return servicioRepository.filtrarPorTipoDeServicio(tipo);
+    }
+
+    @Override
+    public List<Servicio> filtrarPorDescripcion(String descripcion) {
+        return servicioRepository.filtrarPorDescripcion(descripcion);
+    }
+
+    @Override
+    public List<Servicio> filtrarPorDestino(String destino) {
+        return servicioRepository.filtrarPorDestino(destino);
+    }
+
 }
