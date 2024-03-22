@@ -12,4 +12,5 @@ public interface FileService {
     File store(MultipartFile file) throws IOException;
     File getFile(String id) throws FileNotFoundException;
     List<ResponseFile> getFiles();
+    ResponseFile mapearFile(File file);
 }

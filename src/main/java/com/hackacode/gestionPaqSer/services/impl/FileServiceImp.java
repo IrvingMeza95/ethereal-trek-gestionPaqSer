@@ -43,15 +43,20 @@ public class FileServiceImp implements FileService {
 
     @Override
     public List<ResponseFile> getFiles() {
-        List<ResponseFile> files = fileRepository.findAll().stream().map(dbFile -> {
-            return ResponseFile.builder()
-                    .name(dbFile.getName())
-                    .url("/api/services/files/" + dbFile.getId())
-                    .type(dbFile.getType())
-                    .size(dbFile.getData().length)
-                    .build();
-        }).collect(Collectors.toList());
+        List<ResponseFile> files = fileRepository.findAll().stream().map(this::mapearFile)
+                .collect(Collectors.toList());
         return files;
+    }
+
+    @Override
+    public ResponseFile mapearFile(File file){
+        return ResponseFile.builder()
+                .id(file.getId())
+                .name(file.getName())
+                .url("/api/services/files/" + file.getId())
+                .type(file.getType())
+                .size(file.getData().length)
+                .build();
     }
 
 }

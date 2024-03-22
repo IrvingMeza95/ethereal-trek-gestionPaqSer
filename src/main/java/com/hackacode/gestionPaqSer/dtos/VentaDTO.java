@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class VentaDTO {
-    private Integer idVenta;
+    private String idVenta;
     private ClienteDTO cliente;
     private EmpleadoDTO empleado;
     private ServicioDTO servicio;

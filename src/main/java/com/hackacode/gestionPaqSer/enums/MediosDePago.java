@@ -22,4 +22,13 @@ public enum MediosDePago {
     public double getComision() {
         return comision;
     }
+
+    public static MediosDePago getMedioDePago(String medioDePago){
+        for (MediosDePago mp : MediosDePago.values()){
+            if (mp.name().equalsIgnoreCase(medioDePago))
+                return mp;
+        }
+        return null;
+    }
+
 }

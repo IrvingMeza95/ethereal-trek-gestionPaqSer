@@ -38,7 +38,7 @@ public class VentaController {
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @GetMapping("/{id}")
-    public ResponseEntity<VentaDTO> obtenerVenta(@PathVariable(value = "id") Integer idVenta) throws MyException {
+    public ResponseEntity<VentaDTO> obtenerVenta(@PathVariable(value = "id") String idVenta) throws MyException {
         return new ResponseEntity<>(ventaMapper.getVentaDTO(ventaService.obtenerVenta(idVenta)),
                 HttpStatus.OK);
     }
@@ -52,14 +52,14 @@ public class VentaController {
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PutMapping("/{id}")
-    public ResponseEntity<VentaDTO> actualizarVenta(@RequestBody Venta venta, @PathVariable Integer id) throws MyException {
+    public ResponseEntity<VentaDTO> actualizarVenta(@RequestBody Venta venta, @PathVariable String id) throws MyException {
         return new ResponseEntity<>(ventaMapper.getVentaDTO(ventaService.actualizarVenta(venta, id)),
                 HttpStatus.OK);
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminarVenta(@PathVariable(value = "id") Integer idVenta) throws MyException {
+    public ResponseEntity<String> eliminarVenta(@PathVariable(value = "id") String idVenta) throws MyException {
         ventaService.eliminarVenta(idVenta);
         return new ResponseEntity<>("Venta Eliminada", HttpStatus.NO_CONTENT);
     }

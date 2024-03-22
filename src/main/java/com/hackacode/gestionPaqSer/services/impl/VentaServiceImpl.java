@@ -9,12 +9,15 @@ import com.hackacode.gestionPaqSer.enums.TipoDeVenta;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
 import com.hackacode.gestionPaqSer.repositories.VentaRepository;
 import com.hackacode.gestionPaqSer.services.PaqueteService;
+import com.hackacode.gestionPaqSer.services.RegistroService;
 import com.hackacode.gestionPaqSer.services.ServicioService;
 import com.hackacode.gestionPaqSer.services.VentaService;
+import com.hackacode.gestionPaqSer.utilities.Utilidad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -28,6 +31,8 @@ public class VentaServiceImpl implements VentaService {
     private PaqueteService paqueteService;
     @Autowired
     private UsuariosFeign usuariosFeign;
+    @Autowired
+    private RegistroService registroService;
 
     @Override
     public Venta crearVenta(Venta venta) throws MyException {
@@ -35,7 +40,7 @@ public class VentaServiceImpl implements VentaService {
         venta.setCliente(usuariosFeign.obtenerCliente(venta.getCliente().getId()));
         venta.setEmpleado(usuariosFeign.obtenerEmpleado(venta.getEmpleado().getId()));
         Venta ventaEntity = ventaRepository.save(venta);
-
+        registroService.guardar(ventaEntity);
         return ventaEntity;
     }
 
@@ -49,16 +54,13 @@ public class VentaServiceImpl implements VentaService {
             venta.setTotal(paquete.getPrecio());
             venta.setPaquete(paqueteService.obtenerPaquete(venta.getPaquete().getIdPaquete()));
         }
-        for (MediosDePago mp : MediosDePago.values()){
-            if (mp.name().equals(venta.getMedioPago())){
-                venta.setTotal(Math.round((venta.getTotal() * (1 + mp.getComision())) * 100.0) / 100.0);
-                break;
-            }
-        }
+        venta.setTotal(Utilidad.redondear(
+                venta.getTotal() * (1 + Objects.requireNonNull(MediosDePago.getMedioDePago(venta.getMedioPago())).getComision())
+        ));
     }
 
     @Override
-    public Venta obtenerVenta(Integer idVenta) throws MyException {
+    public Venta obtenerVenta(String idVenta) throws MyException {
         Optional<Venta> ventaEntity = ventaRepository.findById(idVenta);
         if (ventaEntity.isEmpty())
             throw new MyException("Error al cargar datos de la venta.");
@@ -71,7 +73,7 @@ public class VentaServiceImpl implements VentaService {
     }
 
     @Override
-    public Venta actualizarVenta(Venta nuevaVenta, Integer id) throws MyException {
+    public Venta actualizarVenta(Venta nuevaVenta, String id) throws MyException {
         Venta venta = obtenerVenta(id);
         venta.setCliente(nuevaVenta.getCliente());
         venta.setEmpleado(nuevaVenta.getEmpleado());
@@ -80,12 +82,15 @@ public class VentaServiceImpl implements VentaService {
         venta.setTipoVenta(nuevaVenta.getTipoVenta());
         venta.setFechaVenta(nuevaVenta.getFechaVenta());
         venta.setMedioPago(nuevaVenta.getMedioPago());
-        return ventaRepository.save(venta);
+        ventaRepository.save(venta);
+        registroService.actualizar(venta);
+        return venta;
     }
 
     @Override
-    public void eliminarVenta(Integer ventaId) throws MyException {
+    public void eliminarVenta(String ventaId) throws MyException {
         Venta venta = obtenerVenta(ventaId);
+        registroService.eliminar(ventaId);
         ventaRepository.delete(venta);
     }
 

@@ -2,10 +2,12 @@ package com.hackacode.gestionPaqSer.services.impl;
 
 import com.hackacode.gestionPaqSer.entities.File;
 import com.hackacode.gestionPaqSer.entities.Paquete;
+import com.hackacode.gestionPaqSer.enums.TipoDeVenta;
 import com.hackacode.gestionPaqSer.exceptions.MyException;
 import com.hackacode.gestionPaqSer.repositories.PaqueteRepository;
 import com.hackacode.gestionPaqSer.services.FileService;
 import com.hackacode.gestionPaqSer.services.PaqueteService;
+import com.hackacode.gestionPaqSer.utilities.Utilidad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +35,7 @@ public class PaqueteServiceImpl implements PaqueteService {
             paquete.setPrecio(paquete.getPrecio() +
                     Double.valueOf(paqueteRepository.extraerPrecioDeServicio(s.getIdServicio())));
         });
-        paquete.setPrecio(Math.round((paquete.getPrecio() * .9) * 100.0) / 100.0);
+        paquete.setPrecio(Utilidad.redondear(paquete.getPrecio() * (1 - TipoDeVenta.PAQUETE.getDescuento())));
     }
 
     @Override

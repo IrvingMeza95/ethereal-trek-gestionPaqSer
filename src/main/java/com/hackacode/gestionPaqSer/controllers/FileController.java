@@ -30,12 +30,12 @@ public class FileController {
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PostMapping
-    public ResponseEntity<ResponseMessage> subir(@RequestParam("file") MultipartFile file) throws IOException {
+    public ResponseEntity<ResponseFile> subir(@RequestParam("file") MultipartFile file) throws IOException {
         if (file.getContentType() == null){
             throw new IOException();
         }
-        fileService.store(file);
-        return ResponseEntity.status(HttpStatus.OK).body(new  ResponseMessage("Archivo subido correctamente."));
+        File newFile = fileService.store(file);
+        return ResponseEntity.status(HttpStatus.OK).body(fileService.mapearFile(newFile));
     }
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")

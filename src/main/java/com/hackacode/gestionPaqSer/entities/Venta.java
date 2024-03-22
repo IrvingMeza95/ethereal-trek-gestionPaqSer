@@ -12,9 +12,9 @@ import lombok.NoArgsConstructor;
 @Table(name = "ventas")
 public class Venta {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "uuid")
     @Column(name = "id_venta")
-    private Integer idVenta;
+    private String idVenta;
     @ManyToOne
     @JoinColumn(name = "id_cliente", nullable = false)
     private Cliente cliente;
