@@ -81,4 +81,29 @@ public class PaqueteServiceImpl implements PaqueteService {
         paqueteRepository.save(paquete);
     }
 
+    @Override
+    public List<Paquete> filtrarPorNombre(String nombre) {
+        return paqueteRepository.filtrarPorNombre(nombre);
+    }
+
+    @Override
+    public List<Paquete> filtrarPorDescripcion(String descripcion) {
+        return paqueteRepository.filtrarPorDescripcion(descripcion);
+    }
+
+    @Override
+    public List<Paquete> filtrarPorServicio(String idServicio) {
+        return paqueteRepository.filtrarPorServicio(idServicio);
+    }
+
+    @Override
+    public List<Paquete> filtrarPorServicioTipoServicio(String tipo) {
+        return paqueteRepository.filtrarPorServicioTipoDeServicio(tipo);
+    }
+
+    @Override
+    public List<Paquete> filtrarPorServicioDestino(String destino) {
+        return paqueteRepository.filtrarPorServicioDestino(destino);
+    }
+
 }

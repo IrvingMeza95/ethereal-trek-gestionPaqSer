@@ -14,4 +14,9 @@ public interface PaqueteService {
     void eliminarPaquete(String paqueteId) throws MyException;
     void actualizarImagenPrincipal(String paqueteId, String imagenId) throws MyException, FileNotFoundException;
     void agregarImagen(String paqueteId, String imagenId) throws MyException, FileNotFoundException;
+    List<Paquete> filtrarPorNombre(String nombre);
+    List<Paquete> filtrarPorDescripcion(String descripcion);
+    List<Paquete> filtrarPorServicio(String idServicio);
+    List<Paquete> filtrarPorServicioTipoServicio(String tipo);
+    List<Paquete> filtrarPorServicioDestino(String destino);
 }

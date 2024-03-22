@@ -74,6 +74,41 @@ public class PaqueteController {
         paqueteService.agregarImagen(paqueteId,imagenId);
     }
 
+    @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
+    @GetMapping("/filtrar/nombre/{nomnbre}")
+    public ResponseEntity<List<PaqueteDTO>> filtrarPorNombre(@PathVariable String nomnbre) {
+        return new ResponseEntity<>(paqueteMapper.getListaPaqueteDTO(paqueteService.filtrarPorNombre(nomnbre))
+                , HttpStatus.OK);
+    }
+
+    @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
+    @GetMapping("/filtrar/descripcion/{descripcion}")
+    public ResponseEntity<List<PaqueteDTO>> filtrarPorDescripcion(@PathVariable String descripcion) {
+        return new ResponseEntity<>(paqueteMapper.getListaPaqueteDTO(paqueteService.filtrarPorDescripcion(descripcion))
+                , HttpStatus.OK);
+    }
+
+    @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
+    @GetMapping("/filtrar/servicio/{idServicio}")
+    public ResponseEntity<List<PaqueteDTO>> filtrarPorServicio(@PathVariable String idServicio) {
+        return new ResponseEntity<>(paqueteMapper.getListaPaqueteDTO(paqueteService.filtrarPorServicio(idServicio))
+                , HttpStatus.OK);
+    }
+
+    @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
+    @GetMapping("/filtrar/servicio-tipo-servicio/{tipo}")
+    public ResponseEntity<List<PaqueteDTO>> filtrarPorServicioTipoDeServicio(@PathVariable String tipo) {
+        return new ResponseEntity<>(paqueteMapper.getListaPaqueteDTO(paqueteService.filtrarPorServicioTipoServicio(tipo))
+                , HttpStatus.OK);
+    }
+
+    @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
+    @GetMapping("/filtrar/servicio-destino/{destino}")
+    public ResponseEntity<List<PaqueteDTO>> filtrarPorServicioDestino(@PathVariable String destino) {
+        return new ResponseEntity<>(paqueteMapper.getListaPaqueteDTO(paqueteService.filtrarPorServicioDestino(destino))
+                , HttpStatus.OK);
+    }
+
     public ResponseEntity<ResponseMessage> metodoAlternativo(Throwable e){
         String error = "";
         if (e.getMessage() != null){
