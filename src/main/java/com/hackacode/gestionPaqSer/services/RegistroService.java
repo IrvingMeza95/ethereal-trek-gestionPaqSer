@@ -12,4 +12,8 @@ public interface RegistroService {
     List<Registro> listarRegistros();
     Registro actualizar(Venta venta) throws MyException;
     void eliminar(String param) throws MyException;
+    List<Object[]> resumenPorAnioMesMedioDePago(String anio, String mes);
+    List<Object[]> resumenPorAnioMesTipoDeVenta(String anio, String mes);
+    List<Object[]> resumenDeServiciosPorAnioMesTipoDeServicio(String anio, String mes);
+    List<Object[]> resumenDePaquetesPorAnioMesTipoDeServicio(String anio, String mes);
 }

@@ -51,6 +51,54 @@ public class RegistroServiceImpl implements RegistroService {
         registroRepository.delete(registro);
     }
 
+    @Override
+    public List<Object[]> resumenPorAnioMesMedioDePago(String anio, String mes) {
+        List<Object[]> registros = registroRepository.resumenPorAnioMesMedioDePago(anio,mes);
+        for (Object[] row : registros){
+            for (Object o : row) {
+                System.out.print(o + " ");
+            }
+            System.out.println("");
+        }
+        return registros;
+    }
+
+    @Override
+    public List<Object[]> resumenPorAnioMesTipoDeVenta(String anio, String mes) {
+        List<Object[]> registros = registroRepository.resumenPorAnioMesTipoDeVenta(anio,mes);
+        for (Object[] row : registros){
+            for (Object o : row) {
+                System.out.print(o + " ");
+            }
+            System.out.println("");
+        }
+        return registros;
+    }
+
+    @Override
+    public List<Object[]> resumenDeServiciosPorAnioMesTipoDeServicio(String anio, String mes) {
+        List<Object[]> registros = registroRepository.resumenDeServiciosPorAnioMesTipoDeServicio(anio,mes);
+        for (Object[] row : registros){
+            for (Object o : row) {
+                System.out.print(o + " ");
+            }
+            System.out.println("");
+        }
+        return registros;
+    }
+
+    @Override
+    public List<Object[]> resumenDePaquetesPorAnioMesTipoDeServicio(String anio, String mes) {
+        List<Object[]> registros = registroRepository.resumenDePaquetesPorAnioMesTipoDeServicio(anio,mes);
+        for (Object[] row : registros){
+            for (Object o : row) {
+                System.out.print(o + " ");
+            }
+            System.out.println("");
+        }
+        return registros;
+    }
+
     public Registro mapearRegistro(Registro registro, Venta venta){
         registro.setVenta(venta);
         if (venta.getTipoVenta().equalsIgnoreCase(TipoDeVenta.PAQUETE.name())){
