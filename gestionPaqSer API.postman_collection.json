@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "eabbd3a7-de9e-4346-8ef5-fe3556da4d86",
+		"_postman_id": "5b493839-fab5-4cb7-a704-d4737acd701c",
 		"name": "gestionPaqSer API",
 		"description": "DESCRIPCION DE MI API REST\n\nContact Support:\n Name: 21ZAM03\n Email: 21jose03.free@gmail.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -35,7 +35,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "<integer>",
+											"value": "<string>",
 											"description": "(Required) "
 										}
 									]
@@ -78,7 +78,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"imagenPrincipal\": \"<string>\"\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"imagenPrincipal\": \"<string>\"\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"imagenPrincipal\": \"<string>\"\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"imagenPrincipal\": \"<string>\"\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}"
+									"body": "{\n  \"idVenta\": \"<string>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"imagenPrincipal\": \"<string>\"\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"imagenPrincipal\": \"<string>\"\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"imagenPrincipal\": \"<string>\"\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"imagenPrincipal\": \"<string>\"\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}"
 								}
 							]
 						},
@@ -98,7 +98,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}",
+									"raw": "{\n  \"idVenta\": \"<string>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -118,7 +118,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "<integer>",
+											"value": "<string>",
 											"description": "(Required) "
 										}
 									]
@@ -141,7 +141,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}",
+											"raw": "{\n  \"idVenta\": \"<string>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -175,7 +175,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"imagenPrincipal\": \"<string>\"\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"imagenPrincipal\": \"<string>\"\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"imagenPrincipal\": \"<string>\"\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"imagenPrincipal\": \"<string>\"\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}"
+									"body": "{\n  \"idVenta\": \"<string>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"imagenPrincipal\": \"<string>\"\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"imagenPrincipal\": \"<string>\"\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"imagenPrincipal\": \"<string>\"\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"imagenPrincipal\": \"<string>\"\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}"
 								}
 							]
 						},
@@ -201,7 +201,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "<integer>",
+											"value": "<string>",
 											"description": "(Required) "
 										}
 									]
@@ -306,7 +306,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  \"SERVICIO\",\n  \"PAQUETE\"\n]"
+									"body": "[\n  \"PAQUETE\",\n  \"PAQUETE\"\n]"
 								}
 							]
 						}
@@ -368,7 +368,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  \"TRANSFERENCIA\",\n  \"TARJETA_DE_DEBITO\"\n]"
+									"body": "[\n  \"TARJETA_DE_DEBITO\",\n  \"TARJETA_DE_CREDITO\"\n]"
 								}
 							]
 						}
@@ -447,7 +447,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "[\n  {\n    \"idVenta\": \"<integer>\",\n    \"cliente\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\"\n    },\n    \"empleado\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\",\n      \"cargo\": \"<string>\",\n      \"sueldo\": \"<double>\"\n    },\n    \"servicio\": {\n      \"idServicio\": \"<string>\",\n      \"tipoServicio\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"paquete\": {\n      \"idPaquete\": \"<string>\",\n      \"listaServicios\": [\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        },\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        }\n      ],\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"precio\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"tipoVenta\": \"<string>\",\n    \"fechaVenta\": \"<string>\",\n    \"medioPago\": \"<string>\",\n    \"total\": \"<double>\"\n  },\n  {\n    \"idVenta\": \"<integer>\",\n    \"cliente\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\"\n    },\n    \"empleado\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\",\n      \"cargo\": \"<string>\",\n      \"sueldo\": \"<double>\"\n    },\n    \"servicio\": {\n      \"idServicio\": \"<string>\",\n      \"tipoServicio\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"paquete\": {\n      \"idPaquete\": \"<string>\",\n      \"listaServicios\": [\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        },\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        }\n      ],\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"precio\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"tipoVenta\": \"<string>\",\n    \"fechaVenta\": \"<string>\",\n    \"medioPago\": \"<string>\",\n    \"total\": \"<double>\"\n  }\n]"
+											"body": "[\n  {\n    \"idVenta\": \"<string>\",\n    \"cliente\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\"\n    },\n    \"empleado\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\",\n      \"cargo\": \"<string>\",\n      \"sueldo\": \"<double>\"\n    },\n    \"servicio\": {\n      \"idServicio\": \"<string>\",\n      \"tipoServicio\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"paquete\": {\n      \"idPaquete\": \"<string>\",\n      \"listaServicios\": [\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        },\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        }\n      ],\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"precio\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"tipoVenta\": \"<string>\",\n    \"fechaVenta\": \"<string>\",\n    \"medioPago\": \"<string>\",\n    \"total\": \"<double>\"\n  },\n  {\n    \"idVenta\": \"<string>\",\n    \"cliente\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\"\n    },\n    \"empleado\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\",\n      \"cargo\": \"<string>\",\n      \"sueldo\": \"<double>\"\n    },\n    \"servicio\": {\n      \"idServicio\": \"<string>\",\n      \"tipoServicio\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"paquete\": {\n      \"idPaquete\": \"<string>\",\n      \"listaServicios\": [\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        },\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        }\n      ],\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"precio\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"tipoVenta\": \"<string>\",\n    \"fechaVenta\": \"<string>\",\n    \"medioPago\": \"<string>\",\n    \"total\": \"<double>\"\n  }\n]"
 										}
 									]
 								}
@@ -506,7 +506,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n  {\n    \"idVenta\": \"<integer>\",\n    \"cliente\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\"\n    },\n    \"empleado\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\",\n      \"cargo\": \"<string>\",\n      \"sueldo\": \"<double>\"\n    },\n    \"servicio\": {\n      \"idServicio\": \"<string>\",\n      \"tipoServicio\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"paquete\": {\n      \"idPaquete\": \"<string>\",\n      \"listaServicios\": [\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        },\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        }\n      ],\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"precio\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"tipoVenta\": \"<string>\",\n    \"fechaVenta\": \"<string>\",\n    \"medioPago\": \"<string>\",\n    \"total\": \"<double>\"\n  },\n  {\n    \"idVenta\": \"<integer>\",\n    \"cliente\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\"\n    },\n    \"empleado\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\",\n      \"cargo\": \"<string>\",\n      \"sueldo\": \"<double>\"\n    },\n    \"servicio\": {\n      \"idServicio\": \"<string>\",\n      \"tipoServicio\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"paquete\": {\n      \"idPaquete\": \"<string>\",\n      \"listaServicios\": [\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        },\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        }\n      ],\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"precio\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"tipoVenta\": \"<string>\",\n    \"fechaVenta\": \"<string>\",\n    \"medioPago\": \"<string>\",\n    \"total\": \"<double>\"\n  }\n]"
+							"body": "[\n  {\n    \"idVenta\": \"<string>\",\n    \"cliente\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\"\n    },\n    \"empleado\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\",\n      \"cargo\": \"<string>\",\n      \"sueldo\": \"<double>\"\n    },\n    \"servicio\": {\n      \"idServicio\": \"<string>\",\n      \"tipoServicio\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"paquete\": {\n      \"idPaquete\": \"<string>\",\n      \"listaServicios\": [\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        },\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        }\n      ],\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"precio\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"tipoVenta\": \"<string>\",\n    \"fechaVenta\": \"<string>\",\n    \"medioPago\": \"<string>\",\n    \"total\": \"<double>\"\n  },\n  {\n    \"idVenta\": \"<string>\",\n    \"cliente\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\"\n    },\n    \"empleado\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\",\n      \"cargo\": \"<string>\",\n      \"sueldo\": \"<double>\"\n    },\n    \"servicio\": {\n      \"idServicio\": \"<string>\",\n      \"tipoServicio\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"paquete\": {\n      \"idPaquete\": \"<string>\",\n      \"listaServicios\": [\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        },\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        }\n      ],\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"precio\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"tipoVenta\": \"<string>\",\n    \"fechaVenta\": \"<string>\",\n    \"medioPago\": \"<string>\",\n    \"total\": \"<double>\"\n  }\n]"
 						}
 					]
 				},
@@ -526,7 +526,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}",
+							"raw": "{\n  \"idVenta\": \"<string>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -561,7 +561,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}",
+									"raw": "{\n  \"idVenta\": \"<string>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -589,7 +589,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"idVenta\": \"<integer>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}"
+							"body": "{\n  \"idVenta\": \"<string>\",\n  \"cliente\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  \"empleado\": {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  \"servicio\": {\n    \"idServicio\": \"<string>\",\n    \"tipoServicio\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"destiono\": \"<string>\",\n    \"fechaServicio\": \"<dateTime>\",\n    \"costo\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"paquete\": {\n    \"idPaquete\": \"<string>\",\n    \"listaServicios\": [\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      },\n      {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          {\n            \"id\": \"<string>\",\n            \"name\": \"<string>\",\n            \"type\": \"<string>\",\n            \"data\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        ],\n        \"imagenPrincipal\": {\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"type\": \"<string>\",\n          \"data\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    ],\n    \"nombre\": \"<string>\",\n    \"descripcion\": \"<string>\",\n    \"precio\": \"<double>\",\n    \"imagenes\": [\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"type\": \"<string>\",\n        \"data\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    ],\n    \"imagenPrincipal\": {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"data\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"tipoVenta\": \"<string>\",\n  \"fechaVenta\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"total\": \"<double>\"\n}"
 						}
 					]
 				}
@@ -1036,7 +1036,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  \"PASAJES_DE_TREN\",\n  \"PASAJES_DE_COLECTIVO\"\n]"
+									"body": "[\n  \"PASAJES_DE_TREN\",\n  \"EXCURSIONES\"\n]"
 								}
 							]
 						}
@@ -2514,7 +2514,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"name\": \"<string>\",\n    \"url\": \"<string>\",\n    \"type\": \"<string>\",\n    \"size\": \"<integer>\"\n  },\n  {\n    \"name\": \"<string>\",\n    \"url\": \"<string>\",\n    \"type\": \"<string>\",\n    \"size\": \"<integer>\"\n  }\n]"
+									"body": "[\n  {\n    \"id\": \"<string>\",\n    \"name\": \"<string>\",\n    \"url\": \"<string>\",\n    \"type\": \"<string>\",\n    \"size\": \"<integer>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"name\": \"<string>\",\n    \"url\": \"<string>\",\n    \"type\": \"<string>\",\n    \"size\": \"<integer>\"\n  }\n]"
 								}
 							]
 						}
@@ -2599,7 +2599,581 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"message\": \"<string>\"\n}"
+							"body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"url\": \"<string>\",\n  \"type\": \"<string>\",\n  \"size\": \"<integer>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "registros",
+			"item": [
+				{
+					"name": "{param}",
+					"item": [
+						{
+							"name": "busucar",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/registros/:param",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"registros",
+										":param"
+									],
+									"variable": [
+										{
+											"key": "param",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/registros/:param",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"registros",
+												":param"
+											],
+											"variable": [
+												{
+													"key": "param"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<string>\",\n  \"venta\": {\n    \"idVenta\": \"<string>\",\n    \"cliente\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\"\n    },\n    \"empleado\": {\n      \"id\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"apellido\": \"<string>\",\n      \"dni\": \"<string>\",\n      \"fechaNac\": \"<string>\",\n      \"pais\": \"<string>\",\n      \"celular\": \"<string>\",\n      \"email\": \"<string>\",\n      \"direccion\": \"<string>\",\n      \"enabled\": \"<boolean>\",\n      \"cargo\": \"<string>\",\n      \"sueldo\": \"<double>\"\n    },\n    \"servicio\": {\n      \"idServicio\": \"<string>\",\n      \"tipoServicio\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"destiono\": \"<string>\",\n      \"fechaServicio\": \"<dateTime>\",\n      \"costo\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"paquete\": {\n      \"idPaquete\": \"<string>\",\n      \"listaServicios\": [\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        },\n        {\n          \"idServicio\": \"<string>\",\n          \"tipoServicio\": \"<string>\",\n          \"descripcion\": \"<string>\",\n          \"destiono\": \"<string>\",\n          \"fechaServicio\": \"<dateTime>\",\n          \"costo\": \"<double>\",\n          \"imagenes\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"imagenPrincipal\": \"<string>\"\n        }\n      ],\n      \"nombre\": \"<string>\",\n      \"descripcion\": \"<string>\",\n      \"precio\": \"<double>\",\n      \"imagenes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"imagenPrincipal\": \"<string>\"\n    },\n    \"tipoVenta\": \"<string>\",\n    \"fechaVenta\": \"<string>\",\n    \"medioPago\": \"<string>\",\n    \"total\": \"<double>\"\n  },\n  \"porcentajeDescuentoPaquete\": \"<double>\",\n  \"totalDescuentoPaquete\": \"<double>\",\n  \"tipoVenta\": \"<string>\",\n  \"fecha\": \"<string>\",\n  \"medioPago\": \"<string>\",\n  \"porcentajeComisionMedioDePago\": \"<double>\",\n  \"totalComisionMedioDePago\": \"<double>\",\n  \"total\": \"<double>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "resumen-tipo-venta",
+					"item": [
+						{
+							"name": "anio",
+							"item": [
+								{
+									"name": "{anio}",
+									"item": [
+										{
+											"name": "mes",
+											"item": [
+												{
+													"name": "{mes}",
+													"item": [
+														{
+															"name": "resumen Por Anio Mes Tipo De Venta",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/registros/resumen-tipo-venta/anio/:anio/mes/:mes",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"registros",
+																		"resumen-tipo-venta",
+																		"anio",
+																		":anio",
+																		"mes",
+																		":mes"
+																	],
+																	"variable": [
+																		{
+																			"key": "anio",
+																			"value": "<string>",
+																			"description": "(Required) "
+																		},
+																		{
+																			"key": "mes",
+																			"value": "<string>",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "*/*"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/registros/resumen-tipo-venta/anio/:anio/mes/:mes",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"registros",
+																				"resumen-tipo-venta",
+																				"anio",
+																				":anio",
+																				"mes",
+																				":mes"
+																			],
+																			"variable": [
+																				{
+																					"key": "anio"
+																				},
+																				{
+																					"key": "mes"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "*/*"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "[\n  [],\n  []\n]"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "resumen-servicios-tipo-servicio",
+					"item": [
+						{
+							"name": "anio",
+							"item": [
+								{
+									"name": "{anio}",
+									"item": [
+										{
+											"name": "mes",
+											"item": [
+												{
+													"name": "{mes}",
+													"item": [
+														{
+															"name": "resumen De Servicios Por Anio Mes Tipo De Servicios",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/registros/resumen-servicios-tipo-servicio/anio/:anio/mes/:mes",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"registros",
+																		"resumen-servicios-tipo-servicio",
+																		"anio",
+																		":anio",
+																		"mes",
+																		":mes"
+																	],
+																	"variable": [
+																		{
+																			"key": "anio",
+																			"value": "<string>",
+																			"description": "(Required) "
+																		},
+																		{
+																			"key": "mes",
+																			"value": "<string>",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "*/*"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/registros/resumen-servicios-tipo-servicio/anio/:anio/mes/:mes",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"registros",
+																				"resumen-servicios-tipo-servicio",
+																				"anio",
+																				":anio",
+																				"mes",
+																				":mes"
+																			],
+																			"variable": [
+																				{
+																					"key": "anio"
+																				},
+																				{
+																					"key": "mes"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "*/*"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "[\n  [],\n  []\n]"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "resumen-paquetes-tipo-servicio",
+					"item": [
+						{
+							"name": "anio",
+							"item": [
+								{
+									"name": "{anio}",
+									"item": [
+										{
+											"name": "mes",
+											"item": [
+												{
+													"name": "{mes}",
+													"item": [
+														{
+															"name": "resumen De Paquetes Por Anio Mes Tipo De Servicios",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/registros/resumen-paquetes-tipo-servicio/anio/:anio/mes/:mes",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"registros",
+																		"resumen-paquetes-tipo-servicio",
+																		"anio",
+																		":anio",
+																		"mes",
+																		":mes"
+																	],
+																	"variable": [
+																		{
+																			"key": "anio",
+																			"value": "<string>",
+																			"description": "(Required) "
+																		},
+																		{
+																			"key": "mes",
+																			"value": "<string>",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "*/*"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/registros/resumen-paquetes-tipo-servicio/anio/:anio/mes/:mes",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"registros",
+																				"resumen-paquetes-tipo-servicio",
+																				"anio",
+																				":anio",
+																				"mes",
+																				":mes"
+																			],
+																			"variable": [
+																				{
+																					"key": "anio"
+																				},
+																				{
+																					"key": "mes"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "*/*"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "[\n  [],\n  []\n]"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "resumen-medio-pago",
+					"item": [
+						{
+							"name": "anio",
+							"item": [
+								{
+									"name": "{anio}",
+									"item": [
+										{
+											"name": "mes",
+											"item": [
+												{
+													"name": "{mes}",
+													"item": [
+														{
+															"name": "resumen Por Anio Mes Medio De Pago",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/registros/resumen-medio-pago/anio/:anio/mes/:mes",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"registros",
+																		"resumen-medio-pago",
+																		"anio",
+																		":anio",
+																		"mes",
+																		":mes"
+																	],
+																	"variable": [
+																		{
+																			"key": "anio",
+																			"value": "<string>",
+																			"description": "(Required) "
+																		},
+																		{
+																			"key": "mes",
+																			"value": "<string>",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "*/*"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/registros/resumen-medio-pago/anio/:anio/mes/:mes",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"registros",
+																				"resumen-medio-pago",
+																				"anio",
+																				":anio",
+																				"mes",
+																				":mes"
+																			],
+																			"variable": [
+																				{
+																					"key": "anio"
+																				},
+																				{
+																					"key": "mes"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "*/*"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "[\n  [],\n  []\n]"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "listar Registros",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/registros",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"registros"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/registros",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"registros"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"venta\": {\n      \"idVenta\": \"<string>\",\n      \"cliente\": {\n        \"id\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"apellido\": \"<string>\",\n        \"dni\": \"<string>\",\n        \"fechaNac\": \"<string>\",\n        \"pais\": \"<string>\",\n        \"celular\": \"<string>\",\n        \"email\": \"<string>\",\n        \"direccion\": \"<string>\",\n        \"enabled\": \"<boolean>\"\n      },\n      \"empleado\": {\n        \"id\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"apellido\": \"<string>\",\n        \"dni\": \"<string>\",\n        \"fechaNac\": \"<string>\",\n        \"pais\": \"<string>\",\n        \"celular\": \"<string>\",\n        \"email\": \"<string>\",\n        \"direccion\": \"<string>\",\n        \"enabled\": \"<boolean>\",\n        \"cargo\": \"<string>\",\n        \"sueldo\": \"<double>\"\n      },\n      \"servicio\": {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"imagenPrincipal\": \"<string>\"\n      },\n      \"paquete\": {\n        \"idPaquete\": \"<string>\",\n        \"listaServicios\": [\n          {\n            \"idServicio\": \"<string>\",\n            \"tipoServicio\": \"<string>\",\n            \"descripcion\": \"<string>\",\n            \"destiono\": \"<string>\",\n            \"fechaServicio\": \"<dateTime>\",\n            \"costo\": \"<double>\",\n            \"imagenes\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"imagenPrincipal\": \"<string>\"\n          },\n          {\n            \"idServicio\": \"<string>\",\n            \"tipoServicio\": \"<string>\",\n            \"descripcion\": \"<string>\",\n            \"destiono\": \"<string>\",\n            \"fechaServicio\": \"<dateTime>\",\n            \"costo\": \"<double>\",\n            \"imagenes\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"imagenPrincipal\": \"<string>\"\n          }\n        ],\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"precio\": \"<double>\",\n        \"imagenes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"imagenPrincipal\": \"<string>\"\n      },\n      \"tipoVenta\": \"<string>\",\n      \"fechaVenta\": \"<string>\",\n      \"medioPago\": \"<string>\",\n      \"total\": \"<double>\"\n    },\n    \"porcentajeDescuentoPaquete\": \"<double>\",\n    \"totalDescuentoPaquete\": \"<double>\",\n    \"tipoVenta\": \"<string>\",\n    \"fecha\": \"<string>\",\n    \"medioPago\": \"<string>\",\n    \"porcentajeComisionMedioDePago\": \"<double>\",\n    \"totalComisionMedioDePago\": \"<double>\",\n    \"total\": \"<double>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"venta\": {\n      \"idVenta\": \"<string>\",\n      \"cliente\": {\n        \"id\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"apellido\": \"<string>\",\n        \"dni\": \"<string>\",\n        \"fechaNac\": \"<string>\",\n        \"pais\": \"<string>\",\n        \"celular\": \"<string>\",\n        \"email\": \"<string>\",\n        \"direccion\": \"<string>\",\n        \"enabled\": \"<boolean>\"\n      },\n      \"empleado\": {\n        \"id\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"apellido\": \"<string>\",\n        \"dni\": \"<string>\",\n        \"fechaNac\": \"<string>\",\n        \"pais\": \"<string>\",\n        \"celular\": \"<string>\",\n        \"email\": \"<string>\",\n        \"direccion\": \"<string>\",\n        \"enabled\": \"<boolean>\",\n        \"cargo\": \"<string>\",\n        \"sueldo\": \"<double>\"\n      },\n      \"servicio\": {\n        \"idServicio\": \"<string>\",\n        \"tipoServicio\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"destiono\": \"<string>\",\n        \"fechaServicio\": \"<dateTime>\",\n        \"costo\": \"<double>\",\n        \"imagenes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"imagenPrincipal\": \"<string>\"\n      },\n      \"paquete\": {\n        \"idPaquete\": \"<string>\",\n        \"listaServicios\": [\n          {\n            \"idServicio\": \"<string>\",\n            \"tipoServicio\": \"<string>\",\n            \"descripcion\": \"<string>\",\n            \"destiono\": \"<string>\",\n            \"fechaServicio\": \"<dateTime>\",\n            \"costo\": \"<double>\",\n            \"imagenes\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"imagenPrincipal\": \"<string>\"\n          },\n          {\n            \"idServicio\": \"<string>\",\n            \"tipoServicio\": \"<string>\",\n            \"descripcion\": \"<string>\",\n            \"destiono\": \"<string>\",\n            \"fechaServicio\": \"<dateTime>\",\n            \"costo\": \"<double>\",\n            \"imagenes\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"imagenPrincipal\": \"<string>\"\n          }\n        ],\n        \"nombre\": \"<string>\",\n        \"descripcion\": \"<string>\",\n        \"precio\": \"<double>\",\n        \"imagenes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"imagenPrincipal\": \"<string>\"\n      },\n      \"tipoVenta\": \"<string>\",\n      \"fechaVenta\": \"<string>\",\n      \"medioPago\": \"<string>\",\n      \"total\": \"<double>\"\n    },\n    \"porcentajeDescuentoPaquete\": \"<double>\",\n    \"totalDescuentoPaquete\": \"<double>\",\n    \"tipoVenta\": \"<string>\",\n    \"fecha\": \"<string>\",\n    \"medioPago\": \"<string>\",\n    \"porcentajeComisionMedioDePago\": \"<double>\",\n    \"totalComisionMedioDePago\": \"<double>\",\n    \"total\": \"<double>\"\n  }\n]"
 						}
 					]
 				}
@@ -2645,7 +3219,7 @@
 		},
 		{
 			"key": "token",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJpcnZpbmdtZXphOTVAZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImFwZWxsaWRvIjoibWV6YSIsImNvcnJlbyI6ImlydmluZ21lemE5NUBnbWFpbC5jb20iLCJleHAiOjE3MTEwNzIzMTUsIm5vbWJyZSI6ImlydmluZyIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiZmJjMTJjNDAtMDczYS00MGQwLWE1OTItMDVmZWQzZmQyMmI0IiwiY2xpZW50X2lkIjoiZnJvbnRfYXBwIn0.EClFrRAyNloOaaV2aadpRNob-YZs9Sx5OICYKFE3hSw",
+			"value": "",
 			"type": "string"
 		}
 	]
