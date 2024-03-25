@@ -1,5 +1,6 @@
 package com.hackacode.gestionPaqSer.services.impl;
 
+import com.hackacode.gestionPaqSer.clientes.GestionEmailFeign;
 import com.hackacode.gestionPaqSer.clientes.UsuariosFeign;
 import com.hackacode.gestionPaqSer.entities.Paquete;
 import com.hackacode.gestionPaqSer.entities.Servicio;
@@ -33,6 +34,8 @@ public class VentaServiceImpl implements VentaService {
     private UsuariosFeign usuariosFeign;
     @Autowired
     private RegistroService registroService;
+    @Autowired
+    private GestionEmailFeign gestionEmailFeign;
 
     @Override
     public Venta crearVenta(Venta venta) throws MyException {
@@ -41,6 +44,7 @@ public class VentaServiceImpl implements VentaService {
         venta.setEmpleado(usuariosFeign.obtenerEmpleado(venta.getEmpleado().getId()));
         Venta ventaEntity = ventaRepository.save(venta);
         registroService.guardar(ventaEntity);
+//        System.out.println("-- " + gestionEmailFeign.generarEmail(ventaEntity));
         return ventaEntity;
     }
 
